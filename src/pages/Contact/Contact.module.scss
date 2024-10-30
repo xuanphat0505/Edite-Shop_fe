@@ -1,0 +1,273 @@
+.contact-section {
+  .contact-container {
+    padding: 100px 15px;
+    .tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: #858585;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .contact-heading {
+      width: 100%;
+      padding-bottom: 40px;
+      text-align: center;
+      h3 {
+        font-size: 36px;
+        font-weight: 500;
+        color: var(--heading-color);
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        line-height: 1;
+      }
+      h4 {
+        font-size: 15px;
+        font-weight: 400;
+        color: var(--heading-color);
+        line-height: 28px;
+      }
+    }
+    .contact-icons {
+      margin-top: 30px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      .icon-box {
+        width: calc(100% / 3);
+        text-align: center;
+        padding: 30px 0;
+        .icon-img {
+          width: 100%;
+          margin-bottom: 20px;
+          img {
+            object-fit: cover;
+          }
+        }
+        .address {
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--heading-color);
+        }
+      }
+    }
+    .map-form {
+      margin-top: 80px;
+      width: 100%;
+      display: flex;
+      gap: 15px;
+
+      .form {
+        width: 100%;
+        padding: 100px 80px 0;
+        .form-notification {
+          width: 100%;
+          h3 {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 400;
+            gap: 3px;
+            color: #428445;
+            svg {
+              width: 20px;
+              height: 20px;
+              fill: currentColor;
+            }
+          }
+        }
+        h3 {
+          font-size: 36px;
+          font-weight: 500;
+          margin-bottom: 10px;
+          text-transform: capitalize;
+        }
+        p.sub-heading {
+          font-size: 15px;
+          font-weight: 400;
+          margin-bottom: 15px;
+          color: var(--heading-color);
+        }
+        form {
+          width: 100%;
+          input,
+          textarea {
+            font-size: 15px;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: #a1a1a1;
+            &:not(:placeholder-shown) ~ label,
+            &:focus ~ label {
+              transform: translateY(-20px);
+              color: var(--heading-color);
+            }
+            &:focus {
+              color: var(--heading-color);
+            }
+          }
+          label {
+            position: absolute;
+            display: inline-block;
+            top: 15px;
+            left: 0;
+            font-size: 15px;
+            font-weight: 400;
+            color: #a1a1a1;
+            text-transform: capitalize;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 1;
+          }
+          .textarea-box,
+          .input-box {
+            &::before {
+              position: absolute;
+              content: "";
+              width: 100%;
+              height: 2px;
+              bottom: -1px;
+              left: 0;
+              background-color: #000;
+              transform: scaleX(0);
+              transform-origin: left;
+              transition: var(--transition);
+            }
+            &:hover::before,
+            &:focus-within::before {
+              transform: scaleX(1);
+            }
+          }
+          .textarea-box {
+            width: 100%;
+            height: auto;
+            padding-top: 20px;
+            position: relative;
+            border-bottom: 2px solid var(--border-color);
+            textarea {
+              max-height: 118px;
+              width: 100%;
+              font-size: 19px !important;
+              font-weight: 400 !important;
+              resize: none;
+            }
+          }
+          .input-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            width: 100%;
+            margin: 10px 0 5px;
+            .input-box {
+              position: relative;
+              width: 100%;
+              border-bottom: 2px solid var(--border-color);
+              input {
+                height: 44px;
+                width: 100%;
+                padding-top: 10px;
+              }
+            }
+          }
+          .btn-box {
+            width: 100%;
+            button {
+              width: 100%;
+              height: 50px;
+              padding: 0 40px;
+              margin-top: 30px;
+              font-size: 15px;
+              font-weight: 500;
+              outline: none;
+              border: none;
+              color: var(--background-color);
+              background-color: var(--button-background2);
+              transition: var(--transition);
+              cursor: pointer;
+              &:hover {
+                background-color: var(--button-background-hover);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    .contact-container {
+      .map-form {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .contact-section {
+    .contact-container {
+      padding: 40px 15px 0;
+      .contact-heading {
+        padding-bottom: 30px;
+        h4 {
+          br {
+            display: none;
+          }
+        }
+      }
+      .contact-icons {
+        margin-top: 0;
+        gap: 10px;
+        padding: 0;
+      }
+      .map-form {
+        gap: 30px;
+        .form {
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-section {
+    .contact-container {
+      padding: 40px 15px 0;
+      .contact-heading {
+        padding-bottom: 30px;
+        h3 {
+          font-size: 30px;
+        }
+        h4 {
+          br {
+            display: none;
+          }
+        }
+      }
+      .contact-icons {
+        margin-top: 0;
+        gap: 10px;
+        padding: 0;
+        flex-direction: column;
+        .icon-box {
+          width: 100%;
+          padding: 15px 0;
+        }
+      }
+      .map-form {
+        gap: 30px;
+        .form {
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+}

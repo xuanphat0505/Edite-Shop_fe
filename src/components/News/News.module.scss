@@ -1,0 +1,20 @@
+.news-container {
+  margin-top: 70px;
+  margin-bottom: 60px;
+  .heading-text {
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .news-list.active {
+    display: block;
+  }
+}

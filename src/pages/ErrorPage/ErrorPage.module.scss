@@ -1,0 +1,43 @@
+.error-section {
+  .error-container {
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+    h1 {
+      width: 100%;
+      font-size: 140px;
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+    h2 {
+      width: 100%;
+      font-size: 60px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #626264;
+      line-height: 27px;
+      text-transform: capitalize;
+    }
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 40px;
+      height: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 0 40px;
+      background-color: var(--button-background2);
+      color: var(--background-color);
+      transition: var(--transition);
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

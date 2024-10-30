@@ -1,0 +1,198 @@
+.add-product_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-shadow: 0 0 9px #0000001f;
+  pointer-events: all;
+  z-index: 100;
+  transform: translateY(100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--transition);
+  &.active {
+    transform: translateY(0);
+    pointer-events: all;
+    opacity: 1;
+  }
+  .product-mini {
+    display: flex;
+    align-items: center;
+    .product-mini_image {
+      width: 65px;
+      height: 65px;
+      min-height: 65px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .product-mini_info {
+      margin: 0 15px;
+      h5 {
+        color: var(--title-color);
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: capitalize;
+        line-height: 1.7;
+      }
+      .product-mini_price {
+        display: block;
+        font-size: 15px;
+        line-height: 1.7;
+        font-weight: 400;
+        color: var(--secondary-price-color);
+      }
+    } 
+    .product-mini_option {
+      width: auto;
+      height: auto;
+      margin: 0 30px;
+      color: var(--title-color);
+      cursor: pointer;
+      .option-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-width: 190px;
+        min-height: 40px;
+        padding: 7px 15px;
+        font-size: 14px;
+        border: 2px solid var(--border-color);
+        text-align: left;
+        background-color: transparent;
+        span {
+          text-transform: capitalize;
+        }
+        .dropdown-icon {
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .sub-option {
+        position: absolute;
+        bottom: 85px;
+        height: auto;
+        width: 250px;
+        padding: 0;
+        z-index: 10;
+        display: none;
+        &.active {
+          display: block;
+        }
+        ul {
+          width: 100%;
+          background-color: var(--background-color);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+          li {
+            display: block;
+            width: 100%;
+            line-height: 18px;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: var(--text-color);
+            background-color: transparent;
+            &.active {
+              color: var(--button-background1);
+              background-color: rgba(85, 70, 159, 0.08);
+            }
+          }
+        }
+      }
+    }
+  }
+  .add-btns {
+    display: flex;
+    align-items: center;
+    .product-mini_quantity {
+      min-width: 120px;
+      width: 120px;
+      height: 40px;
+      border-radius: 0;
+      input {
+        font-size: 16px;
+      }
+      button {
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        &:hover {
+          color: var(--title-color);
+        }
+      }
+    }
+    button.product-mini_btn {
+      min-width: 160px;
+      min-height: 40px;
+      padding: 5px 25px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      color: var(--background-color);
+      background-color: var(--title-color);
+      cursor: pointer;
+      animation-delay: 3s;
+      transition: var(--transition);
+      &:hover {
+        background-color: var(--button-background-hover);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .add-product_box {
+    bottom: 55px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .add-product_box {
+    bottom: 55px;
+    flex-direction: column;
+    .product-mini {
+      flex-wrap: wrap;
+      .product-mini_info {
+        width: -webkit-calc(100% - 110px);
+        padding: 0 15px;
+        margin: 0;
+      }
+      .product-mini_option {
+        width: 100%;
+        margin: 10px 0;
+        .option-dropdown {
+          justify-content: center;
+          border-width: 1px;
+          border-left: none;
+          border-right: none;
+        }
+        .sub-option {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+    .add-btns {
+      width: 100%;
+      justify-content: space-between;
+      button.product-mini_btn {
+        flex: 1;
+      }
+    }
+  }
+}

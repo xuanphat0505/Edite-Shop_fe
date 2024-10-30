@@ -1,0 +1,256 @@
+[
+  {
+    "country": "---",
+    "cities":[]
+  },
+  {
+    "country": "australia",
+    "cities": [
+      "Australian Capital Territory",
+      "New South Wales",
+      "Northern Territory",
+      "Queensland",
+      "South Australia",
+      "Tasmania",
+      "Victoria",
+      "Western Australia"
+    ]
+  },
+  {
+    "country": "belgium",
+    "cities": []
+  },
+  {
+    "country": "canada",
+    "cities": [
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland and Labrador",
+      "Northwest Territories",
+      "Nova Scotia",
+      "Nunavut",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan",
+      "Yukon"
+    ]
+  },
+  {
+    "country": "czechia",
+    "cities": []
+  },
+  {
+    "country": "denmark",
+    "cities": []
+  },
+  {
+    "country": "finland",
+    "cities": []
+  },
+  {
+    "country": "france",
+    "cities": []
+  },
+  {
+    "country": "germany",
+    "cities": []
+  },
+  {
+    "country": "hong kong SAR",
+    "cities": ["Hong Kong Island", "Kowloon", "New Territories"]
+  },
+  {
+    "country": "ireland",
+    "cities": [
+      "Carlow",
+      "Cavan",
+      "Clare",
+      "Cork",
+      "Donegal",
+      "Dublin",
+      "Galway",
+      "Kerry",
+      "Kildare",
+      "Kilkenny",
+      "Laois",
+      "Leitrim",
+      "Limerick",
+      "Longford",
+      "Louth",
+      "Mayo",
+      "Meath",
+      "Monaghan",
+      "Offaly",
+      "Roscommon",
+      "Sligo",
+      "Tipperary",
+      "Waterford",
+      "Westmeath",
+      "Wexford",
+      "Wicklow"
+    ]
+  },
+  {
+    "country": "italy",
+    "cities": [
+      "Agrigento",
+      "Alessandria",
+      "Ancona",
+      "Aosta",
+      "Arezzo",
+      "Ascoli Piceno",
+      "Asti",
+      "Avellino",
+      "Bari",
+      "Barletta-Andria-Trani",
+      "Barletta-Andria-Trani",
+      "Belluno",
+      "Belluno",
+      "Benevento",
+      "Benevento",
+      "Bergamo",
+      "Bergamo",
+      "Biella",
+      "Biella",
+      "Bologna",
+      "Bologna",
+      "Bolzano",
+      "Brescia",
+      "Brindisi",
+      "Cagliari",
+      "Caltanissetta"
+    ]
+  },
+  {
+    "country": "japan",
+    "cities": [
+      "Aichi",
+      "Akita",
+      "Aomori",
+      "Chiba",
+      "Ehime",
+      "Fukui",
+      "Fukuoka",
+      "Fukushima",
+      "Gifu",
+      "Gunma",
+      "Hiroshima",
+      "Hokkaido",
+      "Hyōgo",
+      "Ibaraki",
+      "Ishikawa",
+      "Iwate",
+      "Kagawa"
+    ]
+  },
+  {
+    "country": "malaysia",
+    "cities": [
+      "Johor",
+      "Kedah",
+      "Kelantan",
+      "Kuala Lumpur",
+      "Labuan",
+      "Melaka",
+      "Negeri Sembilan",
+      "Pahang",
+      "Penang",
+      "Perak",
+      "Perlis",
+      "Putrajaya",
+      "Sabah",
+      "Sarawak",
+      "Selangor",
+      "Terengganu"
+    ]
+  },
+  {
+    "country": "netherlands",
+    "cities": []
+  },
+  {
+    "country": "sweden",
+    "cities": []
+  },
+  {
+    "country": "switzerland",
+    "cities": []
+  },
+  {
+    "country": "united arab emirates",
+    "cities": [
+      "Abu Dhabi",
+      "Ajman",
+      "Dubai",
+      "Fujairah",
+      "Ras al-Khaimah",
+      "Sharjah",
+      "Umm al-Quwain"
+    ]
+  },
+  {
+    "country": "united kingdom",
+    "cities": [
+      "British Forces",
+      "England",
+      "Northern Ireland",
+      "Scotland",
+      "Wales"
+    ]
+  },
+  {
+    "country": "united states",
+    "cities": [
+      "Alabama",
+      "Alaska",
+      "American Samoa",
+      "Arizona",
+      "Arkansas",
+      "Armed Forces Americas",
+      "Armed Forces Europe",
+      "Armed Forces Pacific",
+      "California",
+      "Colorado",
+      "Connecticut",
+      "Delaware",
+      "District of Columbia",
+      "Federated States of Micronesia",
+      "Florida",
+      "Georgia",
+      "Guam",
+      "Hawaii",
+      "Idaho",
+      "Illinois",
+      "Indiana",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maine",
+      "Marshall Islands",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Montana",
+      "Nebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Mexico",
+      "New York",
+      "North Carolina",
+      "North Dakota",
+      "Northern Mariana Islands",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "Palau",
+      "Pennsylvania"
+    ]
+  }
+]

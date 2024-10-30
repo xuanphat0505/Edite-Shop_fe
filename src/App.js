@@ -1,23 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
+import About from "./pages/About/About";
+import Blog from "./pages/Blog/Blog";
+import Contact from "./pages/Contact/Contact";
+import Cart from "./components/Cart/Cart";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import NavBar from "./components/NavBar/NavBar";
+import Navigation from "./components/Navigation/Navigation";
+import Question from "./pages/Question/Question";
+import Shop from "./pages/Shop/Shop";
+import ToolBar from "./components/ToolBar/ToolBar";
+import Form from "./shared/Form/Form";
+import WishList from "./pages/WishList/WishList";
+import Search from "./components/Search/Search";
+import SideBar from "./components/SideBar/SideBar";
+import BlogDetail from "./pages/BlogDetail/BlogDetail";
+import Compare from "./pages/Compare/Compare";
+import QuickShop from "./components/QuickShop/QuickShop";
+import CompareBox from "./components/CompareBox/CompareBox";
+import SearchBlogResult from "./pages/SearchBlogResult/SearchBlogResult";
+import SearchProductResult from "./pages/SearchProductResult/SearchProductResult";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import QuestionForm from "./components/QuestionForm/QuestionForm";
+import ViewCart from "./pages/ViewCart/ViewCart";
+import CheckOut from "./pages/CheckOut/CheckOut";
+
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/blog" element={<Blog />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/compare" element={<Compare />}></Route>
+        <Route path="/question" element={<Question />}></Route>
+        <Route path="/shop" element={<Shop />}></Route>
+        <Route path="/error" element={<ErrorPage />}></Route>
+        <Route path="/wishlist" element={<WishList />}></Route>
+        <Route path="/blog/:id" element={<BlogDetail />}></Route>
+        <Route path="/blog/result" element={<SearchBlogResult />}></Route>
+        <Route path="/product/:id" element={<ProductDetail />}></Route>
+        <Route path="/product/result" element={<SearchProductResult />}></Route>
+        <Route path="/view-cart" element={<ViewCart />}></Route>
+        <Route path="/checkout" element={<CheckOut />}></Route>
+      </Routes>
+      <ToastContainer />
+      <Footer />
+      <Form />
+      <Navigation />
+      <Cart />
+      <ToolBar />
+      <Search />
+      <SideBar />
+      <QuickShop />
+      <CompareBox />
+      <QuestionForm />
+      {/* <iframe
+        src="https://bot.orimon.ai/?tenantId=057c0827-182e-4cea-8a86-0b80f1f30189&fullScreenBot=true"
+        height="100%"
+        width="100%"
+        border="none"
+      ></iframe> */}
     </div>
   );
 }

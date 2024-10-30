@@ -1,0 +1,203 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 100;
+  transform: translateX(-130%);
+  transition: var(--transition);
+  pointer-events: none;
+  &.active {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+  button {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    z-index: 101;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--background-color);
+    font-size: 22px;
+    cursor: pointer;
+  }
+  aside {
+    max-width: 350px;
+    width: calc(100vw - 65px);
+    height: 100vh;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    overflow-x: hidden;
+    .sidebar-menu {
+      position: relative;
+      width: 100%;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--title-color);
+        width: calc(100% / 2);
+        left: var(--active-left, 0);
+        transition: left 0.3s ease;
+        z-index: 10;
+      }
+      span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        width: calc(100% / 2);
+        height: 100%;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-color);
+        text-transform: capitalize;
+        cursor: pointer;
+        &.active,
+        &.active svg {
+          color: var(--title-color);
+          fill: var(--title-color);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: var(--border-color);
+        }
+        &:hover {
+          color: var(--title-color);
+        }
+        &:hover svg {
+          fill: var(--title-color);
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: currentColor;
+        }
+      }
+    }
+    .sidebar-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      ul {
+        display: block;
+        width: 100%;
+        // padding-top: 17px;
+        margin-bottom: 56px;
+        li {
+          width: 100%;
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            min-height: 51px;
+            line-height: 1.4;
+            padding: 8px 30px;
+            color: var(--title-color);
+            font-size: 16px;
+            text-transform: capitalize;
+            font-weight: 500;
+            &:hover {
+              background-color: rgba(129, 127, 138, 0.08);
+            }
+            span {
+              svg {
+                width: 16px;
+                height: auto;
+                margin-inline-end: 8px;
+              }
+            }
+          }
+          &.menu-help {
+            padding: 16px 30px;
+            font-size: 16px;
+            border-top: 1px solid rgba(229, 229, 229, 0.6);
+            border-bottom: 1px solid rgba(229, 229, 229, 0.6);
+            color: var(--text-color);
+            p {
+              margin-bottom: 3px;
+              line-height: 1.6;
+            }
+            .menu-infos {
+              line-height: 32px;
+              svg {
+                width: 16px;
+                height: 16px;
+                margin-inline-end: 10px;
+                opacity: 0.8;
+                fill: currentColor;
+                margin: -2px 5px 0 0px;
+                position: relative;
+              }
+            }
+          }
+        }
+      }
+      .blank {
+        display: block;
+        max-width: 350px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-weight: 500;
+        height: 30px;
+        font-size: 12px;
+        background: #fff;
+        padding: 28px 30px;
+        box-shadow: 0 0 4px #00000014;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .side-bar {
+    button {
+      width: 25px;
+      height: 25px;
+      font-size: 20px;
+      top: 10px;
+      left: calc(100vw - 50px);
+    }
+    aside {
+      width: calc(100vw - 60px);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+
+.yarl__thumbnails_container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  padding: 10px 0;
+  transform: translateX(-50%);
+  background-color: #000c;
+  nav {
+    gap: 8px;
+    button {
+      border-color: #535353;
+      padding: 0;
+      &.yarl__thumbnails_thumbnail_active {
+        border-color: var(--background-color);
+        border-width: 2px;
+      }
+    }
+  }
+}

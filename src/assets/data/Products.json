@@ -1,0 +1,384 @@
+[
+  {
+    "name": "UNA chair",
+    "price": "199",
+    "newPrice": "149",
+    "sale": -25,
+    "type": "sale",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
+    "optionColor": [
+      { "code": "#b1660f", "colorName": "Light brown", "optionImageId": 1 },
+      { "code": "#000", "colorName": "Black", "optionImageId": 5 }
+    ],
+    "image": "/images/products/product-1/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-1/sub-product-1.webp",
+        "colorImage": "Light brown"
+      },
+      { "id": 2, "src": "/images/products/product-1/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-1/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-1/sub-product-4.webp" },
+      {
+        "id": 5,
+        "src": "/images/products/product-1/sub-product-5.webp",
+        "colorImage": "Black"
+      },
+      { "id": 6, "src": "/images/products/product-1/sub-product-6.webp" },
+      { "id": 7, "src": "/images/products/product-1/sub-product-7.webp" },
+      { "id": 8, "src": "/images/products/product-1/sub-product-8.webp" }
+    ],
+    "category": [
+      { "categoryType": "kitchen" },
+      { "categoryType": "chair-sofa" }
+    ],
+    "date": "2/1/2024"
+  },
+  {
+    "name": "trestle side table",
+    "newPrice": "126",
+    "sale": false,
+    "type": "best seller",
+    "image": "/images/products/product-2/product.webp",
+    "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-2/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-2/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-2/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-2/sub-product-4.webp" }
+    ],
+    "category": [
+      { "categoryType": "table" },
+      { "categoryType": "bedroom" },
+      { "categoryType": "kitchen" }
+    ],
+    "date": "1/2/2024"
+  },
+  {
+    "name": "trace wall clock",
+    "newPrice": "56",
+    "sale": false,
+    "type": "featured",
+    "image": "/images/products/product-3/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-3/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-3/sub-product-2.webp" }
+    ],
+    "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [
+      { "categoryType": "bedroom" },
+      { "categoryType": "lighting-decor" }
+    ],
+    "date": "3/3/2024"
+  },
+  {
+    "name": "tip table lamp muuto",
+    "newPrice": "61",
+    "sale": false,
+    "type": "best seller",
+    "optionColor": [
+      { "code": "#008000", "colorName": "Green", "optionImageId": 1 },
+      { "code": "#ff0000", "colorName": "Red", "optionImageId": 2 },
+      { "code": "#000", "colorName": "Black", "optionImageId": 3 },
+      { "code": "#fff", "colorName": "White", "optionImageId": 4 }
+    ],
+    "image": "/images/products/product-4/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-4/sub-product-1.webp",
+        "colorImage": "Green"
+      },
+      {
+        "id": 2,
+        "src": "/images/products/product-4/sub-product-2.webp",
+        "colorImage": "Red"
+      },
+      {
+        "id": 3,
+        "src": "/images/products/product-4/sub-product-3.webp",
+        "colorImage": "Black"
+      },
+      {
+        "id": 4,
+        "src": "/images/products/product-4/sub-product-4.webp",
+        "colorImage": "White"
+      },
+      {
+        "id": 5,
+        "src": "/images/products/product-4/sub-product-5.webp"
+      }
+    ],
+    "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "lighting-decor" }],
+    "date": "4/4/2024"
+  },
+  {
+    "name": "tied pendant light",
+    "newPrice": "82",
+    "sale": false,
+    "type": "top rate",
+    "optionColor": [
+      { "code": "#a9a9a9", "colorName": "Dark gray", "optionImageId": 1 },
+      { "code": "#977945", "colorName": "Brown", "optionImageId": 2 },
+      { "code": "#d3d3d3", "colorName": "Light gray", "optionImageId": 3 },
+      { "code": "#fff", "colorName": "White", "optionImageId": 4 }
+    ],
+    "image": "/images/products/product-5/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-5/sub-product-1.webp",
+        "colorImage": "Dark gray"
+      },
+      {
+        "id": 2,
+        "src": "/images/products/product-5/sub-product-2.webp",
+        "colorImage": "Brown"
+      },
+      {
+        "id": 3,
+        "src": "/images/products/product-5/sub-product-3.webp",
+        "colorImage": "Light gray"
+      },
+      {
+        "id": 4,
+        "src": "/images/products/product-5/sub-product-4.webp",
+        "colorImage": "White"
+      },
+      { "id": 5, "src": "/images/products/product-5/sub-product-5.webp" },
+      { "id": 6, "src": "/images/products/product-5/sub-product-6.webp" },
+      { "id": 7, "src": "/images/products/product-5/sub-product-7.webp" }
+    ],
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [
+      { "categoryType": "bedroom" },
+      { "categoryType": "lighting-decor" }
+    ],
+    "date": "5/5/2024"
+  },
+  {
+    "name": "thin coffee table",
+    "newPrice": "209",
+    "sale": false,
+    "type": "featured",
+    "image": "/images/products/product-6/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-6/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-6/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-6/sub-product-3.webp" }
+    ],
+    "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "table" }],
+    "date": "6/6/2024"
+  },
+  {
+    "name": "the hebert chair",
+    "newPrice": "129",
+    "sale": false,
+    "type": "top rate",
+    "optionColor": [
+      { "code": "#ff0000", "colorName": "Red", "optionImageId": 1 },
+      { "code": "#808080", "colorName": "Grey", "optionImageId": 5 }
+    ],
+    "image": "/images/products/product-7/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-7/sub-product-1.webp",
+        "colorImage": "Red"
+      },
+      { "id": 2, "src": "/images/products/product-7/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-7/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-7/sub-product-4.webp" },
+      {
+        "id": 5,
+        "src": "/images/products/product-7/sub-product-5.webp",
+        "colorImage": "Grey"
+      },
+      { "id": 6, "src": "/images/products/product-7/sub-product-6.webp" },
+      { "id": 7, "src": "/images/products/product-7/sub-product-7.webp" },
+      { "id": 8, "src": "/images/products/product-7/sub-product-8.webp" },
+      { "id": 9, "src": "/images/products/product-7/sub-product-9.webp" }
+    ],
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "chair-sofa" }],
+    "date": "7/7/2024"
+  },
+  {
+    "name": "thana rocking chair",
+    "newPrice": "129",
+    "sale": false,
+    "type": "featured",
+    "image": "/images/products/product-8/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-8/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-8/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-8/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-8/sub-product-4.webp" },
+      { "id": 5, "src": "/images/products/product-8/sub-product-5.webp" }
+    ],
+    "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "chair-sofa" }],
+    "date": "8/8/2024"
+  },
+  {
+    "name": "black sweeper & thunel",
+    "newPrice": "49",
+    "sale": false,
+    "type": "top rate",
+    "image": "/images/products/product-12/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-12/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-12/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-12/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-12/sub-product-4.webp" },
+      { "id": 5, "src": "/images/products/product-12/sub-product-5.webp" }
+    ],
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
+    "optionColor": [
+      {
+        "code": "#000",
+        "colorName": "black",
+        "optionImageId": 1
+      },
+      {
+        "code": "#fff",
+        "colorName": "white",
+        "optionImageId": 2
+      }
+    ],
+    "category": [{ "categoryType": "kitchen" }, { "categoryType": "bedroom" }],
+    "date": "5/10/2024"
+  },
+  {
+    "name": "echasse vase",
+    "price": "159",
+    "newPrice": "146",
+    "sale": -8,
+    "type": "sale",
+    "image": "/images/products/product-13/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-13/sub-product-1.webp",
+        "colorImage": "black"
+      },
+      {
+        "id": 2,
+        "src": "/images/products/product-13/sub-product-2.webp",
+        "colorImage": "white"
+      },
+      { "id": 3, "src": "/images/products/product-13/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-13/sub-product-4.webp" }
+    ],
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "Viverra a consectetur Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish...",
+    "category": [{ "categoryType": "kitchen" }],
+    "date": "7/20/2024"
+  },
+  {
+    "name": "knitting chair speepskin upholstry",
+    "newPrice": "109",
+    "sale": false,
+    "type": "top rate",
+    "image": "/images/products/product-11/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-11/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-11/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-11/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-11/sub-product-4.webp" },
+      { "id": 5, "src": "/images/products/product-11/sub-product-5.webp" },
+      { "id": 6, "src": "/images/products/product-11/sub-product-6.webp" },
+      { "id": 7, "src": "/images/products/product-11/sub-product-7.webp" },
+      { "id": 8, "src": "/images/products/product-11/sub-product-8.webp" },
+      { "id": 9, "src": "/images/products/product-11/sub-product-9.webp" },
+      { "id": 10, "src": "/images/products/product-11/sub-product-10.webp" },
+      { "id": 11, "src": "/images/products/product-11/sub-product-11.webp" },
+      { "id": 12, "src": "/images/products/product-11/sub-product-12.webp" },
+      { "id": 13, "src": "/images/products/product-11/sub-product-13.webp" },
+      { "id": 14, "src": "/images/products/product-11/sub-product-14.webp" }
+    ],
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
+    "category": [{ "categoryType": "chair-sofa" }],
+    "date": "5/5/2024"
+  },
+  {
+    "name": "lamino lounge chair & ottoman",
+    "newPrice": "229",
+    "sale": false,
+    "type": "best seller",
+    "image": "/images/products/product-10/product.webp",
+    "subImage": [
+      { "id": 1, "src": "/images/products/product-10/sub-product-1.webp" },
+      { "id": 2, "src": "/images/products/product-10/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-10/sub-product-3.webp" },
+      { "id": 4, "src": "/images/products/product-10/sub-product-4.webp" }
+    ],
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
+    "category": [{ "categoryType": "chair-sofa" }],
+    "date": "6/18/2024"
+  },
+  {
+    "name": "sun washed riveria side chair",
+    "newPrice": "49",
+    "sale": false,
+    "type": "top rate",
+    "image": "/images/products/product-9/product.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "/images/products/product-9/sub-product-1.webp",
+        "colorImage": "beige"
+      },
+      { "id": 2, "src": "/images/products/product-9/sub-product-2.webp" },
+      { "id": 3, "src": "/images/products/product-9/sub-product-3.webp" },
+      {
+        "id": 4,
+        "src": "/images/products/product-9/sub-product-4.webp",
+        "colorImage": "Dark blue"
+      },
+      { "id": 5, "src": "/images/products/product-9/sub-product-5.webp" },
+      { "id": 6, "src": "/images/products/product-9/sub-product-6.webp" },
+      {
+        "id": 7,
+        "src": "/images/products/product-9/sub-product-7.webp",
+        "colorImage": "Grey"
+      },
+      { "id": 8, "src": "/images/products/product-9/sub-product-8.webp" }
+    ],
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
+    "optionColor": [
+      {
+        "code": "#f5f5dc",
+        "colorName": "beige",
+        "optionImageId": 1
+      },
+      {
+        "code": "#0c3db9",
+        "colorName": "Dark blue",
+        "optionImageId": 4
+      },
+      {
+        "code": "#808080",
+        "colorName": "Grey",
+        "optionImageId": 7
+      }
+    ],
+    "category": [{ "categoryType": "chair-sofa" }],
+    "date": "3/30/2024"
+  }
+]

@@ -1,0 +1,86 @@
+.map {
+  position: relative;
+  .map-frame {
+    width: 600px;
+    height: 600px;
+  }
+  .map-info {
+    position: absolute;
+    width: 480px;
+    padding: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+    z-index: 2;
+    .street-name {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 30px;
+      gap: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      i {
+        font-size: 30px;
+      }
+    }
+    .text {
+      display: block;
+      width: 100%;
+      padding-bottom: 15px;
+      font-size: 13px;
+      line-height: 24px;
+      color: #868686;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .schedule {
+      padding-top: 15px;
+      h3 {
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+      li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          width: auto;
+          border: none;
+          text-transform: capitalize;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .map {
+    .map-frame {
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .map {
+    .map-frame {
+      width: 100%;
+      max-height: 250px;
+    }
+    .map-info {
+      overflow-y: scroll;
+      max-height: 200px;
+      max-width: 300px;
+      padding: 20px 10px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.skeleton-container {
+  width: 100%;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    .skeleton {
+      border-radius: 0;
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .skeleton-container {
+    span {
+      justify-content: center;
+      .skeleton {
+        height: 80px;
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skeleton-container {
+    span {
+      justify-content: center;
+      gap: 10px;
+      .skeleton {
+        width: 150px;
+        height: 100px;
+      }
+    }
+  }
+}
