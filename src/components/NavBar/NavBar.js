@@ -5,7 +5,6 @@ import { IoIosSearch, IoMdMenu } from "react-icons/io";
 import { LuUser2 } from "react-icons/lu";
 import { FiHeart, FiLogOut } from "react-icons/fi";
 import { FaCartShopping } from "react-icons/fa6";
-import axios from "axios";
 import classNames from "classnames/bind";
 
 import { menus } from "../../assets/data/Data";
@@ -17,12 +16,12 @@ import {
   logoutSuccess,
 } from "../../redux/authSlice";
 import { BASE_URL } from "../../config/utils";
+import { toastSuccess } from "../../shared/Toastify/Toastify";
+import Loader from "../../shared/Loader/Loader";
 import useAxiosJWT from "../../config/axiosConfig";
 import logoImg from "../../assets/images/logo.avif";
 
 import styles from "./NavBar.module.scss";
-import { toastSuccess } from "../../shared/Toastify/Toastify";
-import Loader from "../../shared/Loader/Loader";
 const cx = classNames.bind(styles);
 function NavBar() {
   const dispatch = useDispatch();
