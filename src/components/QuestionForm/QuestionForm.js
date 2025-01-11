@@ -17,7 +17,7 @@ function QuestionForm() {
   const accessToken = useSelector((state) => state?.auth?.user?.accessToken);
   const { handleCloseQuestionPopUp, openQuestionPopUp } =
     useContext(OpenContext);
-  const { productDetail } = useContext(AxiosContext);
+  const { findProductDetail } = useContext(AxiosContext);
   const getAxiosJWT = useAxiosJWT();
   const axiosJWT = getAxiosJWT();
   const [questionLoading, setQuestionLoading] = useState(false);
@@ -87,20 +87,20 @@ function QuestionForm() {
         <div className={cx("question-form_container")}>
           <div className={cx("question-form_header")}>
             <div className={cx("product-image")}>
-              <img src={productDetail[0]?.image} alt=""></img>
+              <img src={findProductDetail?.image} alt=""></img>
             </div>
             <div className={cx("product-infos")}>
-              <h4>{productDetail[0]?.name}</h4>
+              <h4>{findProductDetail?.name}</h4>
               <div className={cx("price", "product-price")}>
-                {productDetail[0]?.sale ? (
+                {findProductDetail?.sale ? (
                   <>
                     <del style={{ textDecoration: "line-through" }}>
-                      ${Number(productDetail[0]?.price).toFixed(2)}
+                      ${Number(findProductDetail?.price).toFixed(2)}
                     </del>
-                    <ins>${Number(productDetail[0]?.newPrice).toFixed(2)}</ins>
+                    <ins>${Number(findProductDetail?.newPrice).toFixed(2)}</ins>
                   </>
                 ) : (
-                  <span>${Number(productDetail[0]?.newPrice).toFixed(2)}</span>
+                  <span>${Number(findProductDetail?.newPrice).toFixed(2)}</span>
                 )}
               </div>
             </div>

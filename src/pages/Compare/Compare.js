@@ -12,11 +12,13 @@ function Compare() {
   const {
     compareProducts,
     handleRemoveCompareProduct,
-    handleGetProductDetail,
+    handleFindProductDetail
   } = useContext(AxiosContext);
-  const handleGetAndOpen = (productId) => {
-    handleGetProductDetail(productId);
+
+
+  const handleFindAndOpen = (productId) => {
     handleOpenShop();
+    handleFindProductDetail(productId);
   };
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -93,7 +95,7 @@ function Compare() {
                     <div className={cx("table-content")}>
                       <Link
                         className={cx("link-btn")}
-                        onClick={() => handleGetAndOpen(product._id)}
+                        onClick={() => handleFindAndOpen(product._id)}
                       >
                         quick shop
                       </Link>

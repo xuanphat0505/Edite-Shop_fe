@@ -9,6 +9,7 @@ import classNames from "classnames/bind";
 import Tippy from "@tippy.js/react";
 
 import { AxiosContext } from "../../contexts/AxiosContext/AxiosContext";
+import { OpenContext } from "../../contexts/OpenContext/OpenContext";
 import Loader from "../Loader/Loader";
 
 import styles from "./ProductBox2.module.scss";
@@ -27,9 +28,12 @@ function ProductBox2({
     handleAddToWishList,
     handleAddToCompare,
     isInCompareList,
-    handleGetProductDetail,
     handleAddToCart,
+    handleFindProductDetail,
   } = useContext(AxiosContext);
+  const { handleOpenShop } = useContext(OpenContext);
+
+  // state
   const [isActive, setIsActive] = useState(0);
   const [isHover, setIsHover] = useState(false);
   const [optionColorName, setOptionColorName] = useState("");
@@ -39,6 +43,11 @@ function ProductBox2({
     setOptionColorName(colorName);
     setIsActive(index);
   };
+  const handleFindAndOpenShop = (id) => {
+    handleOpenShop();
+    handleFindProductDetail(id);
+  };
+
   return (
     <div className={cx("product-box")}>
       <div
@@ -54,7 +63,7 @@ function ProductBox2({
           >
             <span
               className={cx("icon")}
-              onClick={() => handleGetProductDetail(product._id)}
+              onClick={() => handleFindAndOpenShop(product._id)}
             >
               {quickShopLoading === product._id ? (
                 <Loader size={17} loading={quickShopLoading === product._id} />
@@ -92,7 +101,7 @@ function ProductBox2({
           placement="top"
           content={<div className={cx("tootlip")}>Quick view</div>}
         >
-          <span onClick={() => handleGetProductDetail(product._id)}>
+          <span onClick={() => handleFindAndOpenShop(product._id)}>
             {quickShopLoading === product._id ? (
               <Loader size={17} loading={quickShopLoading === product._id} />
             ) : (

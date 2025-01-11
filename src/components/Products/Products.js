@@ -9,11 +9,11 @@ import Design1 from "../../shared/Design/Design1";
 import styles from "./Products.module.scss";
 const cx = classNames.bind(styles);
 function Products() {
-  const { data: products } = useAxios(`${BASE_URL}/product`, "get");
   const [tabIndex, setTabIndex] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
+  const { data: products } = useAxios(`${BASE_URL}/product`, "get");
+  
   const handleAnimate = (index) => {
     setTabIndex(index);
     setAnimate(true);

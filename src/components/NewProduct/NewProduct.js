@@ -12,9 +12,8 @@ function NewProduct() {
   const [categoryType, setCategoryType] = useState("bedroom");
   const [animate, setAnimate] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const { data } = useAxios(
-    `${BASE_URL}/product/filter?categoryType=${categoryType}`
-  );
+  const { data: allProducts } = useAxios(`${BASE_URL}/product`);
+
   const handleAnimate = (categorType) => {
     setCategoryType(categorType);
     setAnimate(true);
@@ -22,13 +21,19 @@ function NewProduct() {
       setAnimate(false);
     }, 500);
   };
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setFilteredProducts(data);
-    }, 100);
 
-    return () => clearTimeout(timeoutId); // Cleanup timeout nếu component unmount
-  }, [data]);
+  useEffect(() => {
+    setTimeout(() => {
+      if (allProducts) {
+        const filtered = allProducts.filter((product) =>
+          product.category.some(
+            (cat) => cat.categoryType.toLowerCase() === categoryType
+          )
+        );
+        setFilteredProducts(filtered);
+      }
+    }, 250);
+  }, [categoryType, allProducts]);
 
   return (
     <div className={cx("new-products")}>

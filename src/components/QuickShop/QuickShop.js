@@ -9,17 +9,17 @@ import Tippy from "@tippy.js/react";
 
 import { OpenContext } from "../../contexts/OpenContext/OpenContext";
 import { AxiosContext } from "../../contexts/AxiosContext/AxiosContext";
+import { toastError } from "../../shared/Toastify/Toastify";
 import Loader from "../../shared/Loader/Loader";
 
 import styles from "./QuickShop.module.scss";
-import { toastError } from "../../shared/Toastify/Toastify";
 const cx = classNames.bind(styles);
 function QuickShop() {
   const location = useLocation();
   const navigate = useNavigate();
   const accessToken = useSelector((state) => state?.auth?.user?.accessToken);
   const { openShop, handleCloseShop } = useContext(OpenContext);
-  const { productDetail, handleAddToCart, addToCartLoading } =
+  const { findProductDetail, handleAddToCart, addToCartLoading } =
     useContext(AxiosContext);
 
   const [countValue, setCountValue] = useState(1);
@@ -27,12 +27,16 @@ function QuickShop() {
   const [optionColorName, setOptionColorName] = useState("");
 
   useEffect(() => {
-    if (productDetail && productDetail[0]?.optionColor[0]?.colorName) {
-      setOptionColorName(productDetail[0]?.optionColor[0].colorName); // Update the state after productDetail is available
+    if (
+      findProductDetail &&
+      Array.isArray(findProductDetail.optionColor) &&
+      findProductDetail.optionColor.length > 0
+    ) {
+      setOptionColorName(findProductDetail.optionColor[0].colorName); // Update the state after findProductDetail is available
     }
-  }, [productDetail]);
+  }, [findProductDetail]);
   const handleMouseEnter = (index) => {
-    setOptionColorName(productDetail[0]?.optionColor[index].colorName);
+    setOptionColorName(findProductDetail?.optionColor[index].colorName);
     setHoveredIndex(index); // Set the index of the hovered element
   };
 
@@ -42,9 +46,9 @@ function QuickShop() {
     }
     navigate("/checkout", {
       state: {
-        product: productDetail[0],
+        product: findProductDetail,
         countValue: countValue,
-        subTotalPrice: Number(productDetail[0]?.newPrice) * countValue,
+        subTotalPrice: Number(findProductDetail?.newPrice) * countValue,
         colorName: optionColorName,
       },
     });
@@ -53,7 +57,7 @@ function QuickShop() {
 
   useEffect(() => {
     setCountValue(1);
-  }, [productDetail]);
+  }, [findProductDetail]);
 
   return (
     <>
@@ -65,28 +69,31 @@ function QuickShop() {
         <div className={cx("quick-shop")}>
           <div className={cx("quick-shop_content")}>
             <div className={cx("product-header")}>
-              <Link className={cx("quick-shop_image")}>
-                <img src={productDetail[0]?.image} alt=""></img>
+              <Link
+                className={cx("quick-shop_image")}
+                to={`/product/${findProductDetail?._id}`}
+              >
+                <img src={findProductDetail?.image} alt=""></img>
               </Link>
               <div className={cx("price-title")}>
-                <Link>{productDetail[0]?.name}</Link>
+                <Link>{findProductDetail?.name}</Link>
                 <div className={cx("price", "product-price")}>
-                  {productDetail[0]?.sale ? (
+                  {findProductDetail?.sale ? (
                     <>
-                      <del>${Number(productDetail[0]?.price).toFixed(2)}</del>
+                      <del>${Number(findProductDetail?.price).toFixed(2)}</del>
                       <ins>
-                        ${Number(productDetail[0]?.newPrice).toFixed(2)}
+                        ${Number(findProductDetail?.newPrice).toFixed(2)}
                       </ins>
                     </>
                   ) : (
                     <span>
-                      ${Number(productDetail[0]?.newPrice).toFixed(2)}
+                      ${Number(findProductDetail?.newPrice).toFixed(2)}
                     </span>
                   )}
                 </div>
               </div>
             </div>
-            {productDetail[0]?.optionColor.length > 0 && (
+            {findProductDetail?.optionColor?.length > 0 && (
               <>
                 <div className={cx("color")}>
                   <h4>
@@ -94,7 +101,7 @@ function QuickShop() {
                   </h4>
                 </div>
                 <div className={cx("option-colors", "quickshop-option_colors")}>
-                  {productDetail[0]?.optionColor.map((option, index) => (
+                  {findProductDetail?.optionColor.map((option, index) => (
                     <Tippy
                       content={
                         <div className={cx("tootlip")} key={option._id}>
@@ -150,7 +157,7 @@ function QuickShop() {
                   className={cx("add-product")}
                   onClick={() =>
                     handleAddToCart(
-                      productDetail[0]._id,
+                      findProductDetail._id,
                       countValue,
                       optionColorName,
                       location.pathname === "/view-cart" ? false : true
@@ -173,7 +180,7 @@ function QuickShop() {
               </div>
             </div>
             <div className={cx("view-detail")}>
-              <Link to={`/product/${productDetail[0]?._id}`}>
+              <Link to={`/product/${findProductDetail?._id}`}>
                 <span>View full detail</span>
                 <FaLongArrowAltRight style={{ fontSize: "18px" }} />
               </Link>

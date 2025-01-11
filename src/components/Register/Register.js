@@ -25,7 +25,6 @@ function Register({ setForm = {}, handleCloseForm }) {
   const handleChange = (e) => {
     setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
-  console.log(user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

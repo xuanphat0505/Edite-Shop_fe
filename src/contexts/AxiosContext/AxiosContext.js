@@ -6,6 +6,7 @@ import useAxiosJWT from "../../config/axiosConfig";
 import { BASE_URL } from "../../config/utils";
 import { OpenContext } from "../OpenContext/OpenContext";
 import { toastSuccess, toastError } from "../../shared/Toastify/Toastify";
+import useAxios from "../../hooks/useAxios";
 
 export const AxiosContext = createContext();
 
@@ -16,6 +17,9 @@ function AxiosProvider({ children }) {
 
   const { handleOpenCart, handleCloseShop, handleOpenShop, handleOpenCompare } =
     useContext(OpenContext);
+
+  const [findProductDetail, setFindProductDetail] = useState({});
+  const { data: allProducts } = useAxios(`${BASE_URL}/product`);
 
   // loading when call api
   const [addToCartLoading, setAddToCartLoading] = useState(null);
@@ -32,6 +36,11 @@ function AxiosProvider({ children }) {
   const [productDetail, setProductDetail] = useState([]);
   const [productsInCart, setProductsInCart] = useState([]);
   const [noteInCart, setNoteInCart] = useState("");
+
+  const handleFindProductDetail = (id) => {
+    const productDetail = allProducts.find((product) => product._id === id);
+    setFindProductDetail(productDetail);
+  };
 
   // wishlist
   const addToWishList = async (productId) => {
@@ -99,11 +108,9 @@ function AxiosProvider({ children }) {
         setWishListProducts((prev) =>
           prev.filter((product) => product._id !== productId)
         );
-        setWishList((prev) =>
-          prev.filter((product) => product._id !== productId)
-        );
+        setWishList((prev) => prev.filter((id) => id !== productId));
+        return toastSuccess(result.message);  
       }
-      return toastSuccess(result.message);
     } catch (error) {
       return toastError(error?.response?.data?.message);
     }
@@ -435,6 +442,8 @@ function AxiosProvider({ children }) {
         productsInCart,
         noteInCart,
         subTotalPrice,
+        findProductDetail,
+
         isInWishList,
         handleRemoveFavoriteProduct,
         handleAddToWishList,
@@ -448,6 +457,7 @@ function AxiosProvider({ children }) {
         handleIncreaseProductInCart,
         handleDecreaseProductInCart,
         getProductsInCart,
+        handleFindProductDetail,
       }}
     >
       {children}

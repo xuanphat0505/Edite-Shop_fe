@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import classNames from "classnames/bind";
 import axios from "axios";
 
 import { BASE_URL } from "../../config/utils";
 import { loginStart, loginSuccess, loginFailed } from "../../redux/authSlice";
-import GoogleIcon from "../../assets/images/google-icon.png";
 import { toastError, toastSuccess } from "../../shared/Toastify/Toastify";
+import GoogleIcon from "../../assets/images/google-icon.png";
 import Loader from "../../shared/Loader/Loader";
 
 import styles from "./Login.module.scss";

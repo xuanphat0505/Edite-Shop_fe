@@ -7,11 +7,15 @@ import styles from "./WishList.module.scss";
 import { AxiosContext } from "../../contexts/AxiosContext/AxiosContext";
 const cx = classNames.bind(styles);
 function WishList() {
-  const { wishListProduct, handleRemoveFavoriteProduct } =
+  const { wishListProduct, handleRemoveFavoriteProduct,wishList } =
     useContext(AxiosContext);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  console.log(wishList);
+  console.log(wishListProduct);
+  
+  
   return (
     <section className={cx("wishlist-section")}>
       <div className={cx("wishlist-container")}>

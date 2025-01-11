@@ -74,6 +74,7 @@ function ProductDetail() {
     handleAddToWishList,
     handleAddToCompare,
     handleAddToCart,
+    handleFindProductDetail,
   } = useContext(AxiosContext);
 
   // function slide image and responsive
@@ -101,7 +102,7 @@ function ProductDetail() {
     handleOpenCompare();
   };
   const handleGetAndOpen = (id) => {
-    handleGetProductDetail(id, false);
+    handleFindProductDetail(id);
     handleOpenQuestionPopUp();
   };
   const handleImageClick = (imageId, index, colorName) => {

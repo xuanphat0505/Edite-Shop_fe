@@ -13,11 +13,12 @@ import styles from "./Design2.module.scss";
 const cx = classNames.bind(styles);
 function Design2({ products, animate }) {
   const { handleOpenShop } = useContext(OpenContext);
-  const { handleGetProductDetail, quickShopLoading } = useContext(AxiosContext);
+  const { quickShopLoading, handleFindProductDetail } =
+    useContext(AxiosContext);
 
-  const handleGetAndOpenShop = (id) => {
+  const handleFindAndOpenShop = (id) => {
     handleOpenShop();
-    handleGetProductDetail(id);
+    handleFindProductDetail(id);
   };
   return (
     <div className={cx("product-list", { animate })}>
@@ -35,7 +36,7 @@ function Design2({ products, animate }) {
                 <Tippy
                   content={<div className={cx("tootlip")}>Quick shop</div>}
                 >
-                  <span onClick={() => handleGetAndOpenShop(product._id)}>
+                  <span onClick={() => handleFindAndOpenShop(product._id)}>
                     {quickShopLoading === product._id ? (
                       <Loader
                         size={18}
@@ -45,7 +46,6 @@ function Design2({ products, animate }) {
                     ) : (
                       <PiShoppingCartSimpleBold />
                     )}
-
                   </span>
                 </Tippy>
               </div>

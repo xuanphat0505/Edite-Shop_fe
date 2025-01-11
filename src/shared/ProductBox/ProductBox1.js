@@ -24,17 +24,17 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
     isInCompareList,
     handleAddToWishList,
     handleAddToCompare,
-    handleGetProductDetail,
+    handleFindProductDetail,
     handleAddToCart,
   } = useContext(AxiosContext);
-  const { handleOpenCompare } = useContext(OpenContext);
+  const { handleOpenCompare, handleOpenShop } = useContext(OpenContext);
   const [activeOptionColor, setActiveOptionColor] = useState(0);
   const [hoverOptionImage, setHoverOptionImage] = useState(null);
   const [optionColorName, setOptionColorName] = useState("");
   const [isHover, setIsHover] = useState(false);
   const subImageHover = product?.subImage[1];
   const mainImage = product?.image;
-
+  
   const getSubImageByOptionId = (optionImageId) => {
     const subImage = product?.subImage.find(
       (image) => image.id === optionImageId
@@ -59,6 +59,11 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
   };
   const handleMouseEnter = () => setIsHover(true);
   const handleMouseLeave = () => setIsHover(false);
+
+  const handleFindAndOpenShop = (id) => {
+    handleOpenShop();
+    handleFindProductDetail(id);
+  };
   const displayedImage =
     hoverOptionImage ||
     (isHover
@@ -122,7 +127,7 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
           <Tippy content={<div className={cx("tootlip")}>Quick shop</div>}>
             <div
               className={cx("btn")}
-              onClick={() => handleGetProductDetail(index)}
+              onClick={() => handleFindAndOpenShop(index)}
             >
               {quickShopLoading === product?._id ? (
                 <Loader loading={quickShopLoading === product?._id} size={17} />
@@ -166,7 +171,7 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
           <Tippy content={<div className={cx("tootlip")}>Quick shop</div>}>
             <div
               className={cx("btn")}
-              onClick={() => handleGetProductDetail(product._id)}
+              onClick={() => handleFindAndOpenShop(product._id)}
             >
               {quickShopLoading === product?._id ? (
                 <Loader size={17} loading={quickShopLoading === product?._id} />

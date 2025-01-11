@@ -25,7 +25,7 @@ function Cart() {
     handleRemoveProductInCart,
     handleIncreaseProductInCart,
     handleDecreaseProductInCart,
-    handleGetProductDetail,
+    handleFindProductDetail
   } = useContext(AxiosContext);
 
   const [checkedValue, setCheckedValue] = useState(false);
@@ -63,8 +63,8 @@ function Cart() {
       handleCloseCart();
     }
   };
-  const handleGetAndOpen = (id) => {
-    handleGetProductDetail(id);
+  const handleFindAndOpen = (id) => {
+    handleFindProductDetail(id);
     handleOpenShop();
   };
   useEffect(() => {
@@ -124,7 +124,7 @@ function Cart() {
                                 <Link
                                   className={cx("edit-item")}
                                   onClick={() =>
-                                    handleGetAndOpen(product?.productId?._id)
+                                    handleFindAndOpen(product?.productId?._id)
                                   }
                                 >
                                   <FaPencilAlt />

@@ -11,7 +11,6 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import OpenProvider from "./contexts/OpenContext/OpenContext";
 import AxiosProvider from "./contexts/AxiosContext/AxiosContext";
-import QuickShopProvider from "./contexts/QuickShopContext/QuickShopContext";
 
 import "aos/dist/aos.css";
 import "tippy.js/dist/tippy.css";
@@ -25,21 +24,19 @@ root.render(
     <PersistGate persistor={persistor} loading={null}>
       <SkeletonTheme>
         <BrowserRouter>
-          <QuickShopProvider>
-            <OpenProvider>
-              <AxiosProvider>
-                <GoogleOAuthProvider
-                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                >
-                  <React.StrictMode>
-                    <GlobalStyles>
-                      <App />
-                    </GlobalStyles>
-                  </React.StrictMode>
-                </GoogleOAuthProvider>
-              </AxiosProvider>
-            </OpenProvider>
-          </QuickShopProvider>
+          <OpenProvider>
+            <AxiosProvider>
+              <GoogleOAuthProvider
+                clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+              >
+                <React.StrictMode>
+                  <GlobalStyles>
+                    <App />
+                  </GlobalStyles>
+                </React.StrictMode>
+              </GoogleOAuthProvider>
+            </AxiosProvider>
+          </OpenProvider>
         </BrowserRouter>
       </SkeletonTheme>
     </PersistGate>
