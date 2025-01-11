@@ -104,10 +104,10 @@ function Login({ setForm = {}, handleCloseForm }) {
             onChange={handleChange}
             defaultValue=""
             id="email"
-            type="email"
+            type="text"
             required
-            placeholder="Email address"
           ></input>
+          <label htmlFor="email">email address</label>
         </div>
         <div className={cx("input-box")}>
           <input
@@ -116,8 +116,8 @@ function Login({ setForm = {}, handleCloseForm }) {
             id="password"
             type="password"
             required
-            placeholder="Password"
           ></input>
+          <label htmlFor="password">password</label>
         </div>
         <div className={cx("button")}>
           <button type="submit">

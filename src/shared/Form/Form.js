@@ -11,7 +11,7 @@ import styles from "./Form.module.scss";
 const cx = classNames.bind(styles);
 function Form() {
   const { openForm, handleCloseForm } = useContext(OpenContext);
-  const [form, setForm] = useState("register");
+  const [form, setForm] = useState("login");
 
   useEffect(() => {
     openForm

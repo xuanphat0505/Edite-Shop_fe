@@ -102,6 +102,7 @@ header {
     opacity: 0;
     user-select: none;
     .slide-button {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;

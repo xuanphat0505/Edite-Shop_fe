@@ -85,7 +85,11 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
           }
         >
           <span
-            onClick={() => handleAddToWishList(product._id)}
+            onClick={() => {
+              if (!isInWishList(index)) {
+                handleAddToWishList(product._id);
+              }
+            }}
             className={cx("heart-icon")}
           >
             {wishListLoading === product?._id ? (

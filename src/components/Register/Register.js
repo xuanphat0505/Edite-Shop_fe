@@ -12,6 +12,7 @@ import {
 } from "../../redux/authSlice";
 
 import styles from "./Register.module.scss";
+import { toastSuccess } from "../../shared/Toastify/Toastify";
 const cx = classNames.bind(styles);
 function Register({ setForm = {}, handleCloseForm }) {
   const dispatch = useDispatch();
@@ -24,6 +25,8 @@ function Register({ setForm = {}, handleCloseForm }) {
   const handleChange = (e) => {
     setUser((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
+  console.log(user);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(registerStart());
@@ -38,13 +41,16 @@ function Register({ setForm = {}, handleCloseForm }) {
         }
       );
       const result = res.data;
-      if (result.data) {
+      if (result.success) {
         dispatch(registerSuccess());
-        setForm("login");
+        toastSuccess(result.message, 1000);
+        setTimeout(() => {
+          setForm("login");
+        }, 1500);
       }
     } catch (error) {
       dispatch(registerFail());
-      // alert(error.response?.data?.message);
+      alert(error.response?.data?.message);
     }
   };
 
@@ -64,8 +70,8 @@ function Register({ setForm = {}, handleCloseForm }) {
             id="firstName"
             type="text"
             required
-            placeholder="First name"
           ></input>
+          <label htmlFor="firstName">first name</label>
         </div>
         <div className={cx("input-box")}>
           <input
@@ -73,17 +79,17 @@ function Register({ setForm = {}, handleCloseForm }) {
             id="lastName"
             type="text"
             required
-            placeholder="Last name"
           ></input>
+          <label htmlFor="lastName">last name</label>
         </div>
         <div className={cx("input-box")}>
           <input
             onChange={handleChange}
             id="email"
-            type="email"
+            type="text"
             required
-            placeholder="Email address"
           ></input>
+          <label htmlFor="email">email address</label>
         </div>
         <div className={cx("input-box")}>
           <input
@@ -91,8 +97,8 @@ function Register({ setForm = {}, handleCloseForm }) {
             id="password"
             type="password"
             required
-            placeholder="Password"
           ></input>
+          <label htmlFor="password">password</label>
         </div>
         <div className={cx("button")}>
           <button type="submit">register</button>

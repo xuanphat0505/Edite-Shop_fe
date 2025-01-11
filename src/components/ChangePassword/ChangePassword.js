@@ -59,32 +59,32 @@ function ChangePassword({ setForm = {}, handleCloseForm }) {
         <div className={cx("input-box")}>
           <input
             id="email"
-            type="email"
+            type="text"
             required
-            placeholder="Email Address"
             onChange={handleChange}
             defaultValue=""
           ></input>
+          <label htmlFor="email">email address</label>
         </div>
         <div className={cx("input-box")}>
           <input
             id="newPassword"
             type="password"
             required
-            placeholder="New Password"
             onChange={handleChange}
             defaultValue=""
           ></input>
+          <label htmlFor="new-password">new password</label>
         </div>
         <div className={cx("input-box")}>
           <input
             id="repeatPassword"
             type="password"
             required
-            placeholder="Repeat Password"
             onChange={handleChange}
             defaultValue=""
           ></input>
+          <label htmlFor="repeat-password">repeat password</label>
         </div>
         <div className={cx("button")}>
           <button type="submit">

@@ -31,13 +31,13 @@
       { "id": 8, "src": "/images/products/product-1/sub-product-8.webp" }
     ],
     "category": [
-      { "categoryType": "kitchen" },
-      { "categoryType": "chair-sofa" }
+      { "categoryType": "Kitchen" },
+      { "categoryType": "Sofa" }
     ],
     "date": "2/1/2024"
   },
   {
-    "name": "trestle side table",
+    "name": "trestle side Table",
     "newPrice": "126",
     "sale": false,
     "type": "best seller",
@@ -51,9 +51,9 @@
       { "id": 4, "src": "/images/products/product-2/sub-product-4.webp" }
     ],
     "category": [
-      { "categoryType": "table" },
-      { "categoryType": "bedroom" },
-      { "categoryType": "kitchen" }
+      { "categoryType": "Table" },
+      { "categoryType": "Bedroom" },
+      { "categoryType": "Kitchen" }
     ],
     "date": "1/2/2024"
   },
@@ -70,13 +70,13 @@
     "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "category": [
-      { "categoryType": "bedroom" },
-      { "categoryType": "lighting-decor" }
+      { "categoryType": "Bedroom" },
+      { "categoryType": "Decor" }
     ],
     "date": "3/3/2024"
   },
   {
-    "name": "tip table lamp muuto",
+    "name": "tip Table lamp muuto",
     "newPrice": "61",
     "sale": false,
     "type": "best seller",
@@ -115,7 +115,7 @@
     ],
     "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [{ "categoryType": "lighting-decor" }],
+    "category": [{ "categoryType": "Decor" }],
     "date": "4/4/2024"
   },
   {
@@ -158,13 +158,13 @@
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "category": [
-      { "categoryType": "bedroom" },
-      { "categoryType": "lighting-decor" }
+      { "categoryType": "Bedroom" },
+      { "categoryType": "Decor" }
     ],
     "date": "5/5/2024"
   },
   {
-    "name": "thin coffee table",
+    "name": "thin coffee Table",
     "newPrice": "209",
     "sale": false,
     "type": "featured",
@@ -176,7 +176,7 @@
     ],
     "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [{ "categoryType": "table" }],
+    "category": [{ "categoryType": "Table" }],
     "date": "6/6/2024"
   },
   {
@@ -210,7 +210,7 @@
     ],
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [{ "categoryType": "chair-sofa" }],
+    "category": [{ "categoryType": "Sofa" }],
     "date": "7/7/2024"
   },
   {
@@ -228,7 +228,7 @@
     ],
     "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [{ "categoryType": "chair-sofa" }],
+    "category": [{ "categoryType": "Sofa" }],
     "date": "8/8/2024"
   },
   {
@@ -258,7 +258,7 @@
         "optionImageId": 2
       }
     ],
-    "category": [{ "categoryType": "kitchen" }, { "categoryType": "bedroom" }],
+    "category": [{ "categoryType": "Kitchen" }, { "categoryType": "Bedroom" }],
     "date": "5/10/2024"
   },
   {
@@ -284,7 +284,7 @@
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Viverra a consectetur Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish...",
-    "category": [{ "categoryType": "kitchen" }],
+    "category": [{ "categoryType": "Kitchen" }],
     "date": "7/20/2024"
   },
   {
@@ -311,7 +311,7 @@
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
-    "category": [{ "categoryType": "chair-sofa" }],
+    "category": [{ "categoryType": "Sofa" }],
     "date": "5/5/2024"
   },
   {
@@ -328,7 +328,7 @@
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
-    "category": [{ "categoryType": "chair-sofa" }],
+    "category": [{ "categoryType": "Sofa" }],
     "date": "6/18/2024"
   },
   {
@@ -378,7 +378,7 @@
         "optionImageId": 7
       }
     ],
-    "category": [{ "categoryType": "chair-sofa" }],
+    "category": [{ "categoryType": "Sofa" }],
     "date": "3/30/2024"
   }
 ]

@@ -25,7 +25,7 @@ function NewProduct() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setFilteredProducts(data);
-    }, 250);
+    }, 100);
 
     return () => clearTimeout(timeoutId); // Cleanup timeout nếu component unmount
   }, [data]);
@@ -39,7 +39,9 @@ function NewProduct() {
             <li
               key={index}
               onClick={() => handleAnimate(tab.categorType)}
-              className={cx(categoryType === tab.categorType ? "active" : "")}
+              className={cx(
+                categoryType.toLowerCase() === tab.categorType ? "active" : ""
+              )}
             >
               {tab.title}
             </li>

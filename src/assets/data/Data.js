@@ -108,9 +108,9 @@ export const tabs = [
 ];
 export const tabsMode2 = [
   { title: "bedroom", categorType: "bedroom" },
-  { title: "lighting & decor", categorType: "lighting-decor" },
+  { title: "lighting & decor", categorType: "decor" },
   { title: "kitchen", categorType: "kitchen" },
-  { title: "chair & sofa ", categorType: "chair-sofa" },
+  { title: "chair & sofa ", categorType: "sofa" },
   { title: "table", categorType: "table" },
 ];
 export const collections = [

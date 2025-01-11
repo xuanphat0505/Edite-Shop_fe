@@ -507,10 +507,7 @@ function ProductDetail() {
                   className={cx("compare-btn", { active: isInCompareList(id) })}
                   onClick={() => handleAddAndOpen(id)}
                 >
-                  <span
-                    style={{ fontSize: "22px" }}
-                    onClick={handleOpenCompare}
-                  >
+                  <span style={{ fontSize: "22px" }}>
                     <FaCheck />
                   </span>
                 </Link>

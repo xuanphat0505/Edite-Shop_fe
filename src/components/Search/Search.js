@@ -38,9 +38,9 @@ function Search() {
   const fetchDB = async () => {
     setIsLoading(true);
     try {
-      const res = await axios.post(`${BASE_URL}/product/search`, {
-        name: searchInput,
-      });
+      const res = await axios.get(
+        `${BASE_URL}/product/search?name=${searchInput}`
+      );
       const result = res.data;
       if (!result.success) {
         setSearchResultText(result.message);
@@ -55,7 +55,7 @@ function Search() {
       return alert(error.response?.data?.message);
     }
   };
-  
+
   useEffect(() => {
     openSearch
       ? document.body.classList.add(cx("no-scroll"))
@@ -128,7 +128,13 @@ function Search() {
                     <img src={result.image} alt=""></img>
                   </Link>
                   <div className={cx("result-info")}>
-                    <Link onClick={()=>handleNavigateAndReload(`/product/${result._id}`)}>{result.name}</Link>
+                    <Link
+                      onClick={() =>
+                        handleNavigateAndReload(`/product/${result._id}`)
+                      }
+                    >
+                      {result.name}
+                    </Link>
                     {result.sale ? (
                       <span>
                         <del>${Number(result.price).toFixed(2)}</del>

@@ -53,11 +53,12 @@ function ResetPassword({ handleCloseForm, setForm = {} }) {
         </p>
         <div className={cx("input-box")}>
           <input
-            type="email"
-            required
-            placeholder="Email address"
+            type="text"
+            id="email"
             onChange={(e) => setEmail(e.target.value)}
+            required
           ></input>
+          <label htmlFor="email">email address</label>
         </div>
         <div className={cx("button")}>
           <button type="submit">
