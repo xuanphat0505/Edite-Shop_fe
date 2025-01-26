@@ -6,8 +6,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import classNames from "classnames/bind";
 
 import { aboutIcons, serviceInfo, memberTeam } from "../../assets/data/Data";
-import signatureImg from "../../assets/images/about/signature.webp";
-import aboutImg1 from "../../assets/images/about/about-1.webp";
+
 
 import styles from "./About.module.scss";
 import "swiper/scss";
@@ -94,11 +93,11 @@ function About() {
             happened to me?" he thought. Ii wasn't a dream.
           </p>
           <div className={cx("signature-image")}>
-            <img src={signatureImg} alt=""></img>
+            <img src="https://res.cloudinary.com/djmeybzjk/image/upload/v1737862185/signature_hxedbr.webp" alt=""></img>
           </div>
         </div>
         <div className={cx("about-image")}>
-          <img src={aboutImg1} alt=""></img>
+          <img src="https://res.cloudinary.com/djmeybzjk/image/upload/v1737862178/about-1_bdcdfb.webp" alt=""></img>
         </div>
       </div>
       <div className={cx("about-advantage")}>

@@ -11,29 +11,44 @@
       { "code": "#b1660f", "colorName": "Light brown", "optionImageId": 1 },
       { "code": "#000", "colorName": "Black", "optionImageId": 5 }
     ],
-    "image": "/images/products/product-1/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855131/product_pdom1a.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-1/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-1_w4jryn.webp",
         "colorImage": "Light brown"
       },
-      { "id": 2, "src": "/images/products/product-1/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-1/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-1/sub-product-4.webp" },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-2_niiawb.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-3_x7xel8.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-4_qdecoz.webp"
+      },
       {
         "id": 5,
-        "src": "/images/products/product-1/sub-product-5.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-5_g4qobm.webp",
         "colorImage": "Black"
       },
-      { "id": 6, "src": "/images/products/product-1/sub-product-6.webp" },
-      { "id": 7, "src": "/images/products/product-1/sub-product-7.webp" },
-      { "id": 8, "src": "/images/products/product-1/sub-product-8.webp" }
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-6_s1lzny.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-7_czets9.webp"
+      },
+      {
+        "id": 8,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-8_sz6a6q.webp"
+      }
     ],
-    "category": [
-      { "categoryType": "Kitchen" },
-      { "categoryType": "Sofa" }
-    ],
+    "category": [{ "categoryType": "Kitchen" }, { "categoryType": "Sofa" }],
     "date": "2/1/2024"
   },
   {
@@ -41,14 +56,26 @@
     "newPrice": "126",
     "sale": false,
     "type": "best seller",
-    "image": "/images/products/product-2/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/product_i0roxr.webp",
     "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-2/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-2/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-2/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-2/sub-product-4.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-1_ioq2ei.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-2_lkwcaq.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/sub-product-3_m0mexc.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/sub-product-4_eg4rbx.webp"
+      }
     ],
     "category": [
       { "categoryType": "Table" },
@@ -62,17 +89,20 @@
     "newPrice": "56",
     "sale": false,
     "type": "featured",
-    "image": "/images/products/product-3/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/product_jtompw.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-3/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-3/sub-product-2.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/sub-product-1_ongadi.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/sub-product-2_cez3cp.webp"
+      }
     ],
     "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [
-      { "categoryType": "Bedroom" },
-      { "categoryType": "Decor" }
-    ],
+    "category": [{ "categoryType": "Bedroom" }, { "categoryType": "Decor" }],
     "date": "3/3/2024"
   },
   {
@@ -86,31 +116,31 @@
       { "code": "#000", "colorName": "Black", "optionImageId": 3 },
       { "code": "#fff", "colorName": "White", "optionImageId": 4 }
     ],
-    "image": "/images/products/product-4/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/product_jhkq45.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-4/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855137/sub-product-1_xgv76m.webp",
         "colorImage": "Green"
       },
       {
         "id": 2,
-        "src": "/images/products/product-4/sub-product-2.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-2_mldlzf.webp",
         "colorImage": "Red"
       },
       {
         "id": 3,
-        "src": "/images/products/product-4/sub-product-3.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-3_rnfibs.webp",
         "colorImage": "Black"
       },
       {
         "id": 4,
-        "src": "/images/products/product-4/sub-product-4.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-4_hgqwit.webp",
         "colorImage": "White"
       },
       {
         "id": 5,
-        "src": "/images/products/product-4/sub-product-5.webp"
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-5_f5bxkl.webp"
       }
     ],
     "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
@@ -129,38 +159,44 @@
       { "code": "#d3d3d3", "colorName": "Light gray", "optionImageId": 3 },
       { "code": "#fff", "colorName": "White", "optionImageId": 4 }
     ],
-    "image": "/images/products/product-5/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/product_awpd62.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-5/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-1_dnkliy.webp",
         "colorImage": "Dark gray"
       },
       {
         "id": 2,
-        "src": "/images/products/product-5/sub-product-2.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-2_iqcw7b.webp",
         "colorImage": "Brown"
       },
       {
         "id": 3,
-        "src": "/images/products/product-5/sub-product-3.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-3_lbekam.webp",
         "colorImage": "Light gray"
       },
       {
         "id": 4,
-        "src": "/images/products/product-5/sub-product-4.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855138/sub-product-4_s0o43y.webp",
         "colorImage": "White"
       },
-      { "id": 5, "src": "/images/products/product-5/sub-product-5.webp" },
-      { "id": 6, "src": "/images/products/product-5/sub-product-6.webp" },
-      { "id": 7, "src": "/images/products/product-5/sub-product-7.webp" }
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/sub-product-5_hgkjvb.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/sub-product-6_n2s437.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/sub-product-7_f5p6uh.webp"
+      }
     ],
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
-    "category": [
-      { "categoryType": "Bedroom" },
-      { "categoryType": "Decor" }
-    ],
+    "category": [{ "categoryType": "Bedroom" }, { "categoryType": "Decor" }],
     "date": "5/5/2024"
   },
   {
@@ -168,11 +204,20 @@
     "newPrice": "209",
     "sale": false,
     "type": "featured",
-    "image": "/images/products/product-6/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/product_r0oxgk.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-6/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-6/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-6/sub-product-3.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/sub-product-1_mfhq3p.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/sub-product-2_gszslj.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855140/sub-product-3_aa3urg.webp"
+      }
     ],
     "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
@@ -188,25 +233,46 @@
       { "code": "#ff0000", "colorName": "Red", "optionImageId": 1 },
       { "code": "#808080", "colorName": "Grey", "optionImageId": 5 }
     ],
-    "image": "/images/products/product-7/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855139/product_vhxurb.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-7/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855140/sub-product-1_uuyi1h.webp",
         "colorImage": "Red"
       },
-      { "id": 2, "src": "/images/products/product-7/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-7/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-7/sub-product-4.webp" },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855140/sub-product-2_lrogfp.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855140/sub-product-3_ki14tq.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855142/sub-product-4_usu7tu.webp"
+      },
       {
         "id": 5,
-        "src": "/images/products/product-7/sub-product-5.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855151/sub-product-5_azqyxm.webp",
         "colorImage": "Grey"
       },
-      { "id": 6, "src": "/images/products/product-7/sub-product-6.webp" },
-      { "id": 7, "src": "/images/products/product-7/sub-product-7.webp" },
-      { "id": 8, "src": "/images/products/product-7/sub-product-8.webp" },
-      { "id": 9, "src": "/images/products/product-7/sub-product-9.webp" }
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855151/sub-product-6_lk9h62.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855151/sub-product-7_s14yft.webp"
+      },
+      {
+        "id": 8,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-8_rl8181.webp"
+      },
+      {
+        "id": 9,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-9_dtbfzz.webp"
+      }
     ],
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
@@ -218,13 +284,28 @@
     "newPrice": "129",
     "sale": false,
     "type": "featured",
-    "image": "/images/products/product-8/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/product_iqdiqs.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-8/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-8/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-8/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-8/sub-product-4.webp" },
-      { "id": 5, "src": "/images/products/product-8/sub-product-5.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-1_daxje0.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-2_s8fhig.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-3_ff42t2.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/sub-product-4_rzwvp8.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-5_zyqzrx.webp"
+      }
     ],
     "shortDescription": "Premium Materials Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam...",
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
@@ -236,13 +317,28 @@
     "newPrice": "49",
     "sale": false,
     "type": "top rate",
-    "image": "/images/products/product-12/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855135/product_hhwq9i.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-12/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-12/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-12/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-12/sub-product-4.webp" },
-      { "id": 5, "src": "/images/products/product-12/sub-product-5.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855135/sub-product-1_wlmwho.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855135/sub-product-2_salaeo.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-3_y3flgq.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-4_wumefb.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-5_lwjbeo.webp"
+      }
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Description Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or simply kicking it, the versatile and understated Royale Blanco is going to get you where...",
@@ -267,20 +363,26 @@
     "newPrice": "146",
     "sale": -8,
     "type": "sale",
-    "image": "/images/products/product-13/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/product_fwuzsj.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-13/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-1_qtb2vp.webp",
         "colorImage": "black"
       },
       {
         "id": 2,
-        "src": "/images/products/product-13/sub-product-2.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-2_qbfbey.webp",
         "colorImage": "white"
       },
-      { "id": 3, "src": "/images/products/product-13/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-13/sub-product-4.webp" }
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-3_trdbtw.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855136/sub-product-4_wr5o2c.webp"
+      }
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Viverra a consectetur Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish...",
@@ -292,22 +394,60 @@
     "newPrice": "109",
     "sale": false,
     "type": "top rate",
-    "image": "/images/products/product-11/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/product_urnkcw.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-11/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-11/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-11/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-11/sub-product-4.webp" },
-      { "id": 5, "src": "/images/products/product-11/sub-product-5.webp" },
-      { "id": 6, "src": "/images/products/product-11/sub-product-6.webp" },
-      { "id": 7, "src": "/images/products/product-11/sub-product-7.webp" },
-      { "id": 8, "src": "/images/products/product-11/sub-product-8.webp" },
-      { "id": 9, "src": "/images/products/product-11/sub-product-9.webp" },
-      { "id": 10, "src": "/images/products/product-11/sub-product-10.webp" },
-      { "id": 11, "src": "/images/products/product-11/sub-product-11.webp" },
-      { "id": 12, "src": "/images/products/product-11/sub-product-12.webp" },
-      { "id": 13, "src": "/images/products/product-11/sub-product-13.webp" },
-      { "id": 14, "src": "/images/products/product-11/sub-product-14.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-1_onmv0r.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-2_qoc9ru.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-3_arbsim.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-4_auclzn.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-5_wkphgl.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-6_mrqrug.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855135/sub-product-8_b4kgn3.webp"
+      },
+      {
+        "id": 8,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855135/sub-product-9_zapfxy.webp"
+      },
+      {
+        "id": 9,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-10_fel5c9.webp"
+      },
+      {
+        "id": 10,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-11_psfjwj.webp"
+      },
+      {
+        "id": 11,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855132/sub-product-12_ve2r4i.webp"
+      },
+      {
+        "id": 12,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-13_jdq2ir.webp"
+      },
+      {
+        "id": 13,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/sub-product-14_ws3q7n.webp"
+      }
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",
@@ -319,12 +459,24 @@
     "newPrice": "229",
     "sale": false,
     "type": "best seller",
-    "image": "/images/products/product-10/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855133/product_ebvmtc.webp",
     "subImage": [
-      { "id": 1, "src": "/images/products/product-10/sub-product-1.webp" },
-      { "id": 2, "src": "/images/products/product-10/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-10/sub-product-3.webp" },
-      { "id": 4, "src": "/images/products/product-10/sub-product-4.webp" }
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-1_mqdhum.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-2_ecjjr3.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-3_kmoiuo.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855134/sub-product-4_fzpfwf.webp"
+      }
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
@@ -336,28 +488,43 @@
     "newPrice": "49",
     "sale": false,
     "type": "top rate",
-    "image": "/images/products/product-9/product.webp",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855152/product_ty8rmm.webp",
     "subImage": [
       {
         "id": 1,
-        "src": "/images/products/product-9/sub-product-1.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-1_njuiec.webp",
         "colorImage": "beige"
       },
-      { "id": 2, "src": "/images/products/product-9/sub-product-2.webp" },
-      { "id": 3, "src": "/images/products/product-9/sub-product-3.webp" },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-2_jr4juo.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-3_hnsd3c.webp"
+      },
       {
         "id": 4,
-        "src": "/images/products/product-9/sub-product-4.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-4_t3i4or.webp",
         "colorImage": "Dark blue"
       },
-      { "id": 5, "src": "/images/products/product-9/sub-product-5.webp" },
-      { "id": 6, "src": "/images/products/product-9/sub-product-6.webp" },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-5_kyjtqh.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-6_eigkyb.webp"
+      },
       {
         "id": 7,
-        "src": "/images/products/product-9/sub-product-7.webp",
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-7_viookc.webp",
         "colorImage": "Grey"
       },
-      { "id": 8, "src": "/images/products/product-9/sub-product-8.webp" }
+      {
+        "id": 8,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1737855153/sub-product-8_x7en61.webp"
+      }
     ],
     "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
     "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim....",

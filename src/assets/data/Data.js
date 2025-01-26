@@ -1,18 +1,3 @@
-// COLLECTIONS IMAGE
-import collection1 from "../images/collections/collection-1.webp";
-import collection2 from "../images/collections/collection-2.webp";
-import collection3 from "../images/collections/collection-3.webp";
-import collection4 from "../images/collections/collection-4.webp";
-import collection5 from "../images/collections/collection-5.webp";
-
-// BRAND IMAGES
-import brand1 from "../images/brands/brand-1.webp";
-import brand2 from "../images/brands/brand-2.webp";
-import brand3 from "../images/brands/brand-3.webp";
-import brand4 from "../images/brands/brand-4.webp";
-import brand5 from "../images/brands/brand-5.webp";
-import brand6 from "../images/brands/brand-6.webp";
-
 // SOCIALS
 import {
   FaFacebookF,
@@ -29,21 +14,6 @@ import { BsGrid } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
 
-// ABOUT ICON
-import aboutIcon1 from "../images/about/about-icon-1.webp";
-import aboutIcon2 from "../images/about/about-icon-2.webp";
-import aboutIcon3 from "../images/about/about-icon-3.webp";
-import aboutIcon4 from "../images/about/about-icon-4.webp";
-import aboutIcon5 from "../images/about/about-icon-5.webp";
-import aboutIcon6 from "../images/about/about-icon-6.webp";
-
-// ABOUT TEAM
-import member1 from "../images/about/member-1.webp";
-import member2 from "../images/about/member-2.webp";
-import member3 from "../images/about/member-3.webp";
-import member4 from "../images/about/member-4.webp";
-import member5 from "../images/about/member-5.webp";
-import member6 from "../images/about/member-6.webp";
 
 // BLOG SOCIALS
 import { FaPinterestP, FaTumblr, FaTiktok } from "react-icons/fa6";
@@ -55,26 +25,7 @@ import {
   FaSoundcloud,
 } from "react-icons/fa";
 
-// PAYMENT IMAGES
-import payment1 from "../images/payment/icon-1.svg";
-import payment2 from "../images/payment/icon-2.svg";
-import payment3 from "../images/payment/icon-3.svg";
-import payment4 from "../images/payment/icon-4.svg";
-import payment5 from "../images/payment/icon-5.svg";
-import payment6 from "../images/payment/icon-6.svg";
-import payment7 from "../images/payment/icon-7.svg";
-import payment8 from "../images/payment/icon-8.svg";
-import payment9 from "../images/payment/icon-9.svg";
-import payment10 from "../images/payment/icon-10.svg";
-import payment11 from "../images/payment/icon-11.svg";
-import payment12 from "../images/payment/icon-12.svg";
-import payment13 from "../images/payment/icon-13.svg";
-import payment14 from "../images/payment/icon-14.svg";
-import payment15 from "../images/payment/icon-15.svg";
-import payment16 from "../images/payment/icon-16.svg";
-import payment17 from "../images/payment/icon-17.svg";
-import payment18 from "../images/payment/icon-18.svg";
-import payment19 from "../images/payment/icon-19.svg";
+
 
 // navbar
 export const menus = [
@@ -115,49 +66,60 @@ export const tabsMode2 = [
 ];
 export const collections = [
   {
-    image: collection1,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862185/collection-1_yginqg.webp",
     name: "Desks collection",
     count: 27,
   },
   {
-    image: collection2,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862189/collection-2_kogl4g.webp",
     name: "Wall clock",
     count: 19,
   },
   {
-    image: collection3,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862190/collection-3_towzys.webp",
     name: "Lamp shades",
     count: 85,
   },
   {
-    image: collection4,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862190/collection-4_ylx7oq.webp",
     name: "Accessories",
     count: 125,
   },
   {
-    image: collection5,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862190/collection-5_yawcli.webp",
     name: "Corner sofas &  chaises longues",
     count: 14,
   },
 ];
 export const brands = [
   {
-    image: brand1,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-1_dac9gm.webp",
   },
   {
-    image: brand2,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-2_itavtu.webp",
   },
   {
-    image: brand3,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-3_pqsckp.webp",
   },
   {
-    image: brand4,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-4_o8ntso.webp",
   },
   {
-    image: brand5,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-5_g8u4mj.webp",
   },
   {
-    image: brand6,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862010/brand-6_cmmpta.webp",
   },
 ];
 
@@ -258,37 +220,43 @@ export const subMenu = [
 // about page
 export const aboutIcons = [
   {
-    image: aboutIcon1,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862179/about-icon-1_g8cjlo.webp",
     title: "create unique",
     content:
       "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis",
   },
   {
-    image: aboutIcon3,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862180/about-icon-3_l8mzse.webp",
     title: "awards won",
     content:
       "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione",
   },
   {
-    image: aboutIcon5,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862181/about-icon-5_im2yya.webp",
     title: "flexibility and patience",
     content:
       "Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.",
   },
   {
-    image: aboutIcon2,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862179/about-icon-2_yzyvhe.webp",
     title: "fast delivery",
     content:
       "Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.",
   },
   {
-    image: aboutIcon4,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862180/about-icon-4_dyodhq.webp",
     title: "quality and security",
     content:
       "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis",
   },
   {
-    image: aboutIcon6,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862181/about-icon-6_irkrih.webp",
     title: "support 24/7",
     content:
       "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione",
@@ -333,22 +301,28 @@ export const serviceInfo = [
 ];
 export const memberTeam = [
   {
-    image: member1,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862182/member-1_qnmelm.webp",
   },
   {
-    image: member2,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862182/member-2_tttxr5.webp",
   },
   {
-    image: member3,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862183/member-3_tmldo4.webp",
   },
   {
-    image: member4,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862183/member-4_gacogh.webp",
   },
   {
-    image: member5,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862184/member-5_xw0ilj.webp",
   },
   {
-    image: member6,
+    image:
+      "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862184/member-6_iz5svf.webp",
   },
 ];
 
@@ -504,60 +478,60 @@ export const shareBtn = [
 ];
 export const paymentImages = [
   {
-    image: payment1,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862168/icon-1_lnbjbz.svg",
   },
   {
-    image: payment2,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862174/icon-2_j6lyxk.svg",
   },
   {
-    image: payment3,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862174/icon-3_mudzny.svg",
   },
   {
-    image: payment4,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862175/icon-4_ap2lpk.svg",
   },
   {
-    image: payment5,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862175/icon-5_zdimuc.svg",
   },
   {
-    image: payment6,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862176/icon-6_zovhgd.svg",
   },
   {
-    image: payment7,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862176/icon-7_kotfbu.svg",
   },
   {
-    image: payment8,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862177/icon-8_vpezma.svg",
   },
   {
-    image: payment9,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862177/icon-9_befjvd.svg",
   },
   {
-    image: payment10,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862169/icon-10_kviccr.svg",
   },
   {
-    image: payment11,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862169/icon-11_ibn77k.svg",
   },
   {
-    image: payment12,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862170/icon-12_um1h5v.svg",
   },
   {
-    image: payment13,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862170/icon-13_ausixx.svg",
   },
   {
-    image: payment14,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862171/icon-14_zx1sb2.svg",
   },
   {
-    image: payment15,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862172/icon-15_lv0s93.svg",
   },
   {
-    image: payment16,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862172/icon-16_sxiudb.svg",
   },
   {
-    image: payment17,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862172/icon-17_hf2dok.svg",
   },
   {
-    image: payment18,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862173/icon-18_j6y5xf.svg",
   },
   {
-    image: payment19,
+    image: "https://res.cloudinary.com/djmeybzjk/image/upload/v1737862173/icon-19_j462r4.svg",
   },
 ];

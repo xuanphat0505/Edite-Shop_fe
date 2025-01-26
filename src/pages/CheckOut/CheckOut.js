@@ -1,19 +1,95 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 import classNames from "classnames/bind";
+import axios from "axios";
 
+import { BASE_URL } from "../../config/utils";
 import paymentIcon from "../../assets/images/payment-icon.png";
+import useAxios from "../../hooks/useAxios";
 
 import styles from "./CheckOut.module.scss";
 const cx = classNames.bind(styles);
 function CheckOut() {
   const location = useLocation();
-  const [active, setActive] = useState(false);
+  const [deliveryInfo, setDeliveryInfo] = useState({
+    contact: "",
+    country: "",
+    address: "",
+    city: "",
+    firstName: "",
+    lastName: "",
+    suite: "",
+    postalCode: "",
+  });
+
+  const [cities, setCities] = useState([]);
+  const [textError, setTextError] = useState("");
+  const [zipCodeTimeout, setZipCodeTimeout] = useState(null);
+  const [shippingFee, setShippingFee] = useState(null);
+  const [shippingFeeLoading, setShippingFeeLoading] = useState(false);
+
   const { products, product, subTotalPrice, countValue, colorName } =
     location.state || {};
+  const { data: countries } = useAxios(`${BASE_URL}/cities`);
+
+  const searchCity = async () => {
+    try {
+      const res = await axios.get(
+        `${BASE_URL}/cities/search?country=${deliveryInfo.country}`
+      );
+      const result = await res.data;
+
+      setCities(result.data);
+    } catch (error) {}
+  };
+
+  const fetchShippingFee = async (postalCode, country) => {
+    if (!postalCode || !country) {
+      setTextError("Please fill in all required fields.");
+      return;
+    }
+    setShippingFeeLoading(true);
+    try {
+      const res = await axios.post(`${BASE_URL}/cities/shipping-fee`, {
+        country: country,
+        postalCode: postalCode,
+      });
+      const result = res.data;
+      if (result) {
+        setTextError("");
+        setShippingFee(result.data);
+        setShippingFeeLoading(false);
+      }
+    } catch (error) {
+      setShippingFee(null);
+      setShippingFeeLoading(false);
+      setTextError(error?.response.data.message);
+    }
+  };
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setDeliveryInfo((prev) => ({ ...prev, [id]: value }));
+    if (id === "postalCode") {
+      if (zipCodeTimeout) {
+        clearTimeout(zipCodeTimeout);
+      }
+      const timeout = setTimeout(() => {
+        fetchShippingFee(value, deliveryInfo.country);
+      }, 2000);
+      setZipCodeTimeout(timeout);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.state]);
+
+  useEffect(() => {
+    if (deliveryInfo.country !== "---") {
+      searchCity();
+    }
+  }, [deliveryInfo.country]);
 
   return (
     <section className={cx("checkout-section")}>
@@ -35,72 +111,149 @@ function CheckOut() {
               <h2>contact</h2>
               <div className={cx("input-box")}>
                 <input
-                  placeholder="Email or mobile phone number"
                   type="text"
                   required
+                  id="contact"
+                  placeholder=" "
+                  onChange={handleChange}
                 ></input>
+                <label htmlFor="contact">Email or mobile phone number</label>
               </div>
               <div className={cx("checkbox")}>
-                <input type="checkbox" id="checkbox"></input>
-                <label htmlFor="checkbox">Email me with news and offers</label>
+                <input type="checkbox" id="checkbox-1"></input>
+                <label htmlFor="checkbox-1">
+                  Email me with news and offers
+                </label>
               </div>
             </div>
             <div className={cx("delivery", "checkout-info_box")}>
               <h2>delivery</h2>
               <div className={cx("input-box")}>
-                <select>
-                  <option>poland</option>
-                  <option>poland</option>
-                  <option>poland</option>
-                  <option>poland</option>
+                <select id="country" onChange={handleChange} placeholder=" ">
+                  {countries.map((country) => (
+                    <option key={country._id} value={country.country}>
+                      {country.country}
+                    </option>
+                  ))}
                 </select>
-                <label>Country/Region</label>
+                <label htmlFor="country">Country/Region</label>
               </div>
-              <div className={cx("input-box", "two-input")}>
-                <input type="text" placeholder="First name (optional)"></input>
-                <input type="text" placeholder="Last name" required></input>
-              </div>
-              <div className={cx("input-box")}>
-                <input type="text" placeholder="Adress" required></input>
+              {cities.length > 0 && (
+                <div className={cx("input-box")}>
+                  <select id="city" onChange={handleChange} placeholder=" ">
+                    {cities.map((city) => (
+                      <option key={city._id} value={city.name}>
+                        {city.name}
+                      </option>
+                    ))}
+                  </select>
+                  <label htmlFor="city">City</label>
+                </div>
+              )}
+              <div className={cx("two-input")}>
+                <div className={cx("input-box")}>
+                  <input
+                    type="text"
+                    id="firstName"
+                    required
+                    placeholder=" "
+                    onChange={handleChange}
+                  ></input>
+                  <label htmlFor="firstName">First name (optional)</label>
+                </div>
+                <div className={cx("input-box")}>
+                  <input
+                    type="text"
+                    required
+                    id="lastName"
+                    placeholder=" "
+                    onChange={handleChange}
+                  ></input>
+                  <label htmlFor="lastName">Last name</label>
+                </div>
               </div>
               <div className={cx("input-box")}>
                 <input
                   type="text"
-                  placeholder="Apartment, suite, etc. (optional)"
+                  id="address"
+                  required
+                  onChange={handleChange}
+                  placeholder=" "
                 ></input>
+                <label htmlFor="address">Address</label>
               </div>
-              <div className={cx("input-box", "two-input")}>
-                <input type="text" placeholder="Postal code" required></input>
-                <input type="text" placeholder="City" required></input>
+              <div className={cx("input-box")}>
+                <input
+                  type="text"
+                  id="suite"
+                  onChange={handleChange}
+                  placeholder=" "
+                ></input>
+                <label htmlFor="suite">Apartment, suite, etc. (optional)</label>
               </div>
+              <div className={cx("input-box")}>
+                <input
+                  type="text"
+                  id="postalCode"
+                  required
+                  placeholder=" "
+                  onChange={handleChange}
+                  // value={deliveryInfo.postalCode}
+                ></input>
+                <label htmlFor="zip-code">zip code</label>
+              </div>
+
+              {textError && (
+                <span className={cx("error-text")}>
+                  <p>{textError}</p>
+                </span>
+              )}
+
               <div className={cx("checkbox")}>
-                <input type="checkbox" id="checkbox" required></input>
-                <label htmlFor="checkbox">
+                <input type="checkbox" id="checkbox-2" required></input>
+                <label htmlFor="checkbox-2">
                   Save this information for next time
                 </label>
               </div>
             </div>
             <div className={cx("shipping", "checkout-info_box")}>
               <h2>shipping method</h2>
-              <div className={cx("text-box")}>
-                Enter your shipping address to view available shipping methods.
+              <div
+                className={cx("text-box", {
+                  loading: shippingFeeLoading,
+                  active: !shippingFeeLoading && shippingFee,
+                })}
+              >
+                {shippingFeeLoading ? (
+                  // Skeleton loading UI
+                  <div className={cx("skeleton-wrapper")}>
+                    <Skeleton width={80} height={16} />
+                    <Skeleton width={50} height={16} />
+                  </div>
+                ) : !shippingFee ? (
+                  <p>
+                    Enter your shipping address to view available shipping
+                    methods.
+                  </p>
+                ) : (
+                  <>
+                    <p className={cx("shipping-type")}>standard</p>
+                    <span>${Number(shippingFee).toFixed(2)}</span>
+                  </>
+                )}
               </div>
             </div>
             <div className={cx("payment", "checkout-info_box")}>
               <h2>payment</h2>
               <p>All transactions are secure and encrypted.</p>
-              <div className={cx("text-box", "text-image_box")}>
-                <img src={paymentIcon} alt=""></img>
-                This store can’t accept payments right now.
-              </div>
             </div>
-            <button>Pay now</button>
+            <button className={cx({ pay: shippingFee && !shippingFeeLoading })}>
+              Pay now
+            </button>
           </div>
-          <div className={cx("checkout-products", { active: active })}>
+          <div className={cx("checkout-products")}>
             <div className={cx("product-header")}>
-              <button type="button" onClick={() => setActive((prev) => !prev)}>
-                {active ? "Hide" : "Show"} order summary
-              </button>
+              <h2>order summary</h2>
             </div>
             <aside>
               <div className={cx("product-list")}>
@@ -164,13 +317,23 @@ function CheckOut() {
                 </div>
                 <div className={cx("shipping", "info-box")}>
                   <span>Shipping</span>
-                  <span className={cx("special")}>Enter shipping address</span>
+                  {shippingFeeLoading ? (
+                    <Skeleton width={80} height={16} />
+                  ) : shippingFee && !shippingFeeLoading ? (
+                    <span>${shippingFee.toFixed(2)}</span>
+                  ) : (
+                    <span className={cx("special")}>
+                      Enter shipping address
+                    </span>
+                  )}
                 </div>
                 <div className={cx("total-box")}>
                   <span>total</span>
                   <div className={cx("total-price")}>
                     <p className={cx("currency")}>USD</p>
-                    <span>${subTotalPrice.toFixed(2)}</span>
+                    <span>
+                      ${Number(subTotalPrice + shippingFee).toFixed(2)}
+                    </span>
                   </div>
                 </div>
               </div>

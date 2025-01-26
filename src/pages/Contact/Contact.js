@@ -5,9 +5,6 @@ import classNames from "classnames/bind";
 import { BASE_URL } from "../../config/utils";
 import { toastError, toastSuccess } from "../../shared/Toastify/Toastify";
 import useAxiosJWT from "../../config/axiosConfig";
-import icon1 from "../../assets/images/contact/icon-1.webp";
-import icon2 from "../../assets/images/contact/icon-2.webp";
-import icon3 from "../../assets/images/contact/icon-3.webp";
 import Map from "../../shared/Map/Map";
 import Loader from "../../shared/Loader/Loader";
 
@@ -73,21 +70,30 @@ function Contact() {
         <div className={cx("contact-icons")}>
           <div className={cx("icon-box")}>
             <div className={cx("icon-img")}>
-              <img src={icon1} alt=""></img>
+              <img
+                src="https://res.cloudinary.com/djmeybzjk/image/upload/v1737862168/icon-1_k6yvzj.webp"
+                alt=""
+              ></img>
             </div>
             <p className={cx("tag")}>visit us daily</p>
             <p className={cx("address")}>27 Division St, New York, 10002</p>
           </div>
           <div className={cx("icon-box")}>
             <div className={cx("icon-img")}>
-              <img src={icon2} alt=""></img>
+              <img
+                src="https://res.cloudinary.com/djmeybzjk/image/upload/v1737862168/icon-2_qxvrzv.webp"
+                alt=""
+              ></img>
             </div>
             <p className={cx("tag")}>phone us 24/7</p>
             <p className={cx("address")}>+8 (123) 456 789</p>
           </div>
           <div className={cx("icon-box")}>
             <div className={cx("icon-img")}>
-              <img src={icon3} alt=""></img>
+              <img
+                src="https://res.cloudinary.com/djmeybzjk/image/upload/v1737862168/icon-3_rwsnjp.webp"
+                alt=""
+              ></img>
             </div>
             <p className={cx("tag")}>mail us 24/7</p>
             <p className={cx("address")}> support@gate.com</p>

@@ -1,256 +1,117 @@
 [
   {
     "country": "---",
-    "cities":[]
-  },
-  {
-    "country": "australia",
-    "cities": [
-      "Australian Capital Territory",
-      "New South Wales",
-      "Northern Territory",
-      "Queensland",
-      "South Australia",
-      "Tasmania",
-      "Victoria",
-      "Western Australia"
-    ]
-  },
-  {
-    "country": "belgium",
     "cities": []
   },
   {
-    "country": "canada",
+    "country": "Vietnam",
+
     "cities": [
-      "Alberta",
-      "British Columbia",
-      "Manitoba",
-      "New Brunswick",
-      "Newfoundland and Labrador",
-      "Northwest Territories",
-      "Nova Scotia",
-      "Nunavut",
-      "Ontario",
-      "Prince Edward Island",
-      "Quebec",
-      "Saskatchewan",
-      "Yukon"
-    ]
+      { "name": "Hanoi", "zipCode": "100000" },
+      { "name": "Ho Chi Minh City", "zipCode": "700000" },
+      { "name": "Da Nang", "zipCode": "550000" },
+      { "name": "Hai Phong", "zipCode": "180000" },
+      { "name": "Can Tho", "zipCode": "900000" }
+    ],
+    "shippingFees": 2
   },
   {
-    "country": "czechia",
-    "cities": []
-  },
-  {
-    "country": "denmark",
-    "cities": []
-  },
-  {
-    "country": "finland",
-    "cities": []
-  },
-  {
-    "country": "france",
-    "cities": []
-  },
-  {
-    "country": "germany",
-    "cities": []
-  },
-  {
-    "country": "hong kong SAR",
-    "cities": ["Hong Kong Island", "Kowloon", "New Territories"]
-  },
-  {
-    "country": "ireland",
+    "country": "United States",
     "cities": [
-      "Carlow",
-      "Cavan",
-      "Clare",
-      "Cork",
-      "Donegal",
-      "Dublin",
-      "Galway",
-      "Kerry",
-      "Kildare",
-      "Kilkenny",
-      "Laois",
-      "Leitrim",
-      "Limerick",
-      "Longford",
-      "Louth",
-      "Mayo",
-      "Meath",
-      "Monaghan",
-      "Offaly",
-      "Roscommon",
-      "Sligo",
-      "Tipperary",
-      "Waterford",
-      "Westmeath",
-      "Wexford",
-      "Wicklow"
-    ]
+      { "name": "New York", "zipCode": "10001" },
+      { "name": "Los Angeles", "zipCode": "90001" },
+      { "name": "Chicago", "zipCode": "60601" },
+      { "name": "Houston", "zipCode": "77001" },
+      { "name": "San Francisco", "zipCode": "94101" }
+    ],
+    "shippingFees": 25
   },
   {
-    "country": "italy",
+    "country": "Japan",
     "cities": [
-      "Agrigento",
-      "Alessandria",
-      "Ancona",
-      "Aosta",
-      "Arezzo",
-      "Ascoli Piceno",
-      "Asti",
-      "Avellino",
-      "Bari",
-      "Barletta-Andria-Trani",
-      "Barletta-Andria-Trani",
-      "Belluno",
-      "Belluno",
-      "Benevento",
-      "Benevento",
-      "Bergamo",
-      "Bergamo",
-      "Biella",
-      "Biella",
-      "Bologna",
-      "Bologna",
-      "Bolzano",
-      "Brescia",
-      "Brindisi",
-      "Cagliari",
-      "Caltanissetta"
-    ]
+      { "name": "Tokyo", "zipCode": "1000001" },
+      { "name": "Osaka", "zipCode": "5300001" },
+      { "name": "Yokohama", "zipCode": "2200001" },
+      { "name": "Nagoya", "zipCode": "4500001" },
+      { "name": "Sapporo", "zipCode": "0600001" }
+    ],
+    "shippingFees": 15
   },
   {
-    "country": "japan",
+    "country": "France",
     "cities": [
-      "Aichi",
-      "Akita",
-      "Aomori",
-      "Chiba",
-      "Ehime",
-      "Fukui",
-      "Fukuoka",
-      "Fukushima",
-      "Gifu",
-      "Gunma",
-      "Hiroshima",
-      "Hokkaido",
-      "Hyōgo",
-      "Ibaraki",
-      "Ishikawa",
-      "Iwate",
-      "Kagawa"
-    ]
+      { "name": "Paris", "zipCode": "75000" },
+      { "name": "Marseille", "zipCode": "13000" },
+      { "name": "Lyon", "zipCode": "69000" },
+      { "name": "Toulouse", "zipCode": "31000" },
+      { "name": "Nice", "zipCode": "6000" }
+    ],
+    "shippingFees": 20
   },
   {
-    "country": "malaysia",
+    "country": "United Kingdom",
     "cities": [
-      "Johor",
-      "Kedah",
-      "Kelantan",
-      "Kuala Lumpur",
-      "Labuan",
-      "Melaka",
-      "Negeri Sembilan",
-      "Pahang",
-      "Penang",
-      "Perak",
-      "Perlis",
-      "Putrajaya",
-      "Sabah",
-      "Sarawak",
-      "Selangor",
-      "Terengganu"
-    ]
+      { "name": "London", "zipCode": "EC1A" },
+      { "name": "Manchester", "zipCode": "M1" },
+      { "name": "Birmingham", "zipCode": "B1" },
+      { "name": "Liverpool", "zipCode": "L1" },
+      { "name": "Leeds", "zipCode": "LS1" }
+    ],
+    "shippingFees": 22
   },
   {
-    "country": "netherlands",
-    "cities": []
-  },
-  {
-    "country": "sweden",
-    "cities": []
-  },
-  {
-    "country": "switzerland",
-    "cities": []
-  },
-  {
-    "country": "united arab emirates",
+    "country": "Germany",
     "cities": [
-      "Abu Dhabi",
-      "Ajman",
-      "Dubai",
-      "Fujairah",
-      "Ras al-Khaimah",
-      "Sharjah",
-      "Umm al-Quwain"
-    ]
+      { "name": "Berlin", "zipCode": "10115" },
+      { "name": "Munich", "zipCode": "80331" },
+      { "name": "Hamburg", "zipCode": "20095" },
+      { "name": "Cologne", "zipCode": "50667" },
+      { "name": "Frankfurt", "zipCode": "60311" }
+    ],
+    "shippingFees": 20
   },
   {
-    "country": "united kingdom",
+    "country": "Canada",
     "cities": [
-      "British Forces",
-      "England",
-      "Northern Ireland",
-      "Scotland",
-      "Wales"
-    ]
+      { "name": "Toronto", "zipCode": "M5A" },
+      { "name": "Vancouver", "zipCode": "V5K" },
+      { "name": "Montreal", "zipCode": "H1A" },
+      { "name": "Calgary", "zipCode": "T2A" },
+      { "name": "Ottawa", "zipCode": "K1A" }
+    ],
+    "shippingFees": 28
   },
   {
-    "country": "united states",
+    "country": "Australia",
     "cities": [
-      "Alabama",
-      "Alaska",
-      "American Samoa",
-      "Arizona",
-      "Arkansas",
-      "Armed Forces Americas",
-      "Armed Forces Europe",
-      "Armed Forces Pacific",
-      "California",
-      "Colorado",
-      "Connecticut",
-      "Delaware",
-      "District of Columbia",
-      "Federated States of Micronesia",
-      "Florida",
-      "Georgia",
-      "Guam",
-      "Hawaii",
-      "Idaho",
-      "Illinois",
-      "Indiana",
-      "Iowa",
-      "Kansas",
-      "Kentucky",
-      "Louisiana",
-      "Maine",
-      "Marshall Islands",
-      "Maryland",
-      "Massachusetts",
-      "Michigan",
-      "Minnesota",
-      "Mississippi",
-      "Missouri",
-      "Montana",
-      "Nebraska",
-      "Nevada",
-      "New Hampshire",
-      "New Mexico",
-      "New York",
-      "North Carolina",
-      "North Dakota",
-      "Northern Mariana Islands",
-      "Ohio",
-      "Oklahoma",
-      "Oregon",
-      "Palau",
-      "Pennsylvania"
-    ]
+      { "name": "Sydney", "zipCode": "2000" },
+      { "name": "Melbourne", "zipCode": "3000" },
+      { "name": "Brisbane", "zipCode": "4000" },
+      { "name": "Perth", "zipCode": "6000" },
+      { "name": "Adelaide", "zipCode": "5000" }
+    ],
+    "shippingFees": 18
+  },
+  {
+    "country": "Italy",
+    "cities": [
+      { "name": "Rome", "zipCode": "00100" },
+      { "name": "Milan", "zipCode": "20100" },
+      { "name": "Naples", "zipCode": "80100" },
+      { "name": "Turin", "zipCode": "10100" },
+      { "name": "Palermo", "zipCode": "90100" }
+    ],
+    "shippingFees": 20
+  },
+  {
+    "country": "China",
+    "cities": [
+      { "name": "Beijing", "zipCode": "100000" },
+      { "name": "Shanghai", "zipCode": "200000" },
+      { "name": "Guangzhou", "zipCode": "510000" },
+      { "name": "Shenzhen", "zipCode": "518000" },
+      { "name": "Chengdu", "zipCode": "610000" }
+    ],
+    "shippingFees": 10
   }
 ]

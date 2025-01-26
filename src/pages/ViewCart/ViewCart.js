@@ -1,14 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { LuTrash } from "react-icons/lu";
 import { FaPencilAlt } from "react-icons/fa";
 import classNames from "classnames/bind";
 import Tippy from "@tippy.js/react";
-import axios from "axios";
 
-import useAxios from "../../hooks/useAxios";
 import useAxiosJWT from "../../config/axiosConfig";
 import Loader from "../../shared/Loader/Loader";
 import { BASE_URL } from "../../config/utils";
@@ -22,6 +20,7 @@ function ViewCart() {
   const user = useSelector((state) => state?.auth.user);
   const getAxiostJWT = useAxiosJWT();
   const axiosJWT = getAxiostJWT();
+  const navigate = useNavigate();
   const {
     updateCartLoading,
     subTotalPrice,
@@ -33,23 +32,16 @@ function ViewCart() {
     handleGetProductDetail,
   } = useContext(AxiosContext);
   const { handleOpenShop } = useContext(OpenContext);
-  const { data: countryList } = useAxios(`${BASE_URL}/cities`);
   const [textNote, setTextNote] = useState(noteInCart);
-  const [selectedValue, setSelectedValue] = useState("");
-  const [citiesValue, setCitiesValue] = useState([]);
-  const handleChange = (e) => {
-    setSelectedValue(e.target.value);
-  };
-  const handleSearch = async () => {
-    try {
-      const res = await axios.post(
-        `${BASE_URL}/cities/?country=${selectedValue}`
-      );
-      const result = res.data;
-      setCitiesValue(result.data);
-    } catch (error) {
-      return alert(error?.response?.data.message);
-    }
+
+  const handleNavigate = () => {
+    navigate("/checkout", {
+      state: {
+        products: productsInCart,
+        subTotalPrice: subTotalPrice,
+        countValue: productsInCart?.reduce((acc, item) => acc + item.count, 0),
+      },
+    });
   };
 
   const handleUpdateCart = async (e) => {
@@ -80,9 +72,7 @@ function ViewCart() {
     handleOpenShop();
     handleGetProductDetail(id);
   };
-  useEffect(() => {
-    handleSearch();
-  }, [selectedValue]);
+
   useEffect(() => {
     setTextNote(noteInCart);
   }, [noteInCart]);
@@ -247,7 +237,7 @@ function ViewCart() {
               <div className={cx("subtotal-container")}>
                 <div className={cx("subtotal-box")}>
                   <strong>subtotal:</strong>
-                  <span>${Number(subTotalPrice).toFixed(2)} USD</span>
+                  <span>${Number(subTotalPrice)?.toFixed(2)} USD</span>
                 </div>
                 <p style={{ marginBottom: "10px" }}>
                   Tax included and shipping calculated at checkout
@@ -260,41 +250,7 @@ function ViewCart() {
                 </div>
               </div>
               <button type="submit">update cart</button>
-              <button type="submit">check out</button>
-            </div>
-            <div className={cx("shipping-container")}>
-              <h3>Estimate shipping</h3>
-              <div className={cx("ship-address", "country")}>
-                <label>country</label>
-                <select value={selectedValue} onChange={handleChange}>
-                  {countryList.map((country, index) => (
-                    <option value={country} key={index}>
-                      {country}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {citiesValue.length > 0 && (
-                <div className={cx("ship-address", "province")}>
-                  <label>province</label>
-                  <select>
-                    {citiesValue.map((city, index) => (
-                      <option value={city} key={index}>
-                        {city}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              )}
-              <div className={cx("ship-address", "zip-code")}>
-                <label>zip code</label>
-                <input></input>
-              </div>
-              <div className={cx("button-box")}>
-                <button type="submit" className={cx("estimate-btn")}>
-                  estimate
-                </button>
-              </div>
+              <button type="button" onClick={handleNavigate}>check out</button>
             </div>
           </div>
         </form>
