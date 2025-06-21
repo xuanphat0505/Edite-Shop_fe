@@ -135,24 +135,17 @@ function Cart() {
                               {product?.productId?.sale ? (
                                 <>
                                   <del>
-                                    $
-                                    {Number(product?.productId?.price).toFixed(
-                                      2
-                                    )}
+                                    {Number(product?.productId?.price).toLocaleString()}₫
                                   </del>
-                                  <ins>
-                                    $
+                                  <ins>                                    
                                     {Number(
                                       product?.productId?.newPrice
-                                    ).toFixed(2)}
+                                    ).toLocaleString()}₫
                                   </ins>
                                 </>
                               ) : (
                                 <span>
-                                  $
-                                  {Number(product?.productId?.newPrice).toFixed(
-                                    2
-                                  )}
+                                  {Number(product?.productId?.newPrice).toLocaleString()}₫
                                 </span>
                               )}
                             </div>
@@ -274,7 +267,7 @@ function Cart() {
                 <div className={cx("cart-footer")}>
                   <div className={cx("total")}>
                     <strong>subtotal:</strong>
-                    <span>${Number(subTotalPrice).toFixed(2)} USD</span>
+                    <span>{Number(subTotalPrice).toLocaleString()} VNĐ</span>
                   </div>
                   <div className={cx("checkbox")}>
                     <input

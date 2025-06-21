@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import classNames from "classnames/bind";
 import axios from "axios";
 
-import { BASE_URL } from "../../config/utils";
-import paymentIcon from "../../assets/images/payment-icon.png";
 import useAxios from "../../hooks/useAxios";
+import useAxiosJWT from "../../config/axiosConfig";
+import { BASE_URL } from "../../config/utils";
+import { toastError } from "../../shared/Toastify/Toastify";
 
 import styles from "./CheckOut.module.scss";
 const cx = classNames.bind(styles);
 function CheckOut() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const getAxiosJWT = useAxiosJWT();
+  const axiosJWT = getAxiosJWT();
+  const user = useSelector((state) => state.auth.user);
   const [deliveryInfo, setDeliveryInfo] = useState({
-    contact: "",
+    contact: user?.email,
     country: "",
     address: "",
     city: "",
@@ -21,14 +27,13 @@ function CheckOut() {
     lastName: "",
     suite: "",
     postalCode: "",
+    phone: "",
   });
-
   const [cities, setCities] = useState([]);
   const [textError, setTextError] = useState("");
   const [zipCodeTimeout, setZipCodeTimeout] = useState(null);
   const [shippingFee, setShippingFee] = useState(null);
   const [shippingFeeLoading, setShippingFeeLoading] = useState(false);
-
   const { products, product, subTotalPrice, countValue, colorName } =
     location.state || {};
   const { data: countries } = useAxios(`${BASE_URL}/cities`);
@@ -80,7 +85,35 @@ function CheckOut() {
       setZipCodeTimeout(timeout);
     }
   };
-
+  const handleCreateOrder = async () => {
+    try {
+      const res = await axiosJWT.post(
+        `${BASE_URL}/orders/create`,
+        {
+          products: products,
+          totalAmount: Number(subTotalPrice) + Number(shippingFee),
+          shippingInfo: deliveryInfo,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${user?.accessToken}`,
+          },
+          withCredentials: true,
+        }
+      );
+      const result = res.data;
+      if (result.success) {
+        navigate(`/payment-method`, {
+          state: {
+            orderId: result.data._id,
+            totalAmount: result.data.totalAmount,
+          },
+        });
+      }
+    } catch (error) {
+      return toastError(error?.response.data.message);
+    }
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.state]);
@@ -90,7 +123,7 @@ function CheckOut() {
       searchCity();
     }
   }, [deliveryInfo.country]);
-
+  console.log(user);
   return (
     <section className={cx("checkout-section")}>
       <div className={cx("checkout-container")}>
@@ -116,6 +149,7 @@ function CheckOut() {
                   id="contact"
                   placeholder=" "
                   onChange={handleChange}
+                  value={deliveryInfo.contact}
                 ></input>
                 <label htmlFor="contact">Email or mobile phone number</label>
               </div>
@@ -194,6 +228,15 @@ function CheckOut() {
               <div className={cx("input-box")}>
                 <input
                   type="text"
+                  id="phone"
+                  onChange={handleChange}
+                  placeholder=" "
+                ></input>
+                <label htmlFor="phone">Phone number</label>
+              </div>
+              <div className={cx("input-box")}>
+                <input
+                  type="text"
                   id="postalCode"
                   required
                   placeholder=" "
@@ -221,7 +264,10 @@ function CheckOut() {
               <div
                 className={cx("text-box", {
                   loading: shippingFeeLoading,
-                  active: !shippingFeeLoading && shippingFee,
+                  active:
+                    !shippingFeeLoading &&
+                    shippingFee &&
+                    deliveryInfo.postalCode,
                 })}
               >
                 {shippingFeeLoading ? (
@@ -230,7 +276,7 @@ function CheckOut() {
                     <Skeleton width={80} height={16} />
                     <Skeleton width={50} height={16} />
                   </div>
-                ) : !shippingFee ? (
+                ) : !deliveryInfo.postalCode || !shippingFee ? (
                   <p>
                     Enter your shipping address to view available shipping
                     methods.
@@ -238,7 +284,7 @@ function CheckOut() {
                 ) : (
                   <>
                     <p className={cx("shipping-type")}>standard</p>
-                    <span>${Number(shippingFee).toFixed(2)}</span>
+                    <span>{Number(shippingFee).toLocaleString()}₫</span>
                   </>
                 )}
               </div>
@@ -247,7 +293,13 @@ function CheckOut() {
               <h2>payment</h2>
               <p>All transactions are secure and encrypted.</p>
             </div>
-            <button className={cx({ pay: shippingFee && !shippingFeeLoading })}>
+            <button
+              className={cx({
+                pay:
+                  deliveryInfo.postalCode && shippingFee && !shippingFeeLoading,
+              })}
+              onClick={handleCreateOrder}
+            >
               Pay now
             </button>
           </div>
@@ -277,11 +329,10 @@ function CheckOut() {
                       </div>
                       <div className={cx("product-price")}>
                         <span>
-                          $
-                          {(
-                            Number(product?.productId?.newPrice) *
-                            product?.count
-                          ).toFixed(2)}
+                          {Number(
+                            product?.productId?.newPrice
+                          ).toLocaleString()}
+                          ₫
                         </span>
                       </div>
                     </div>
@@ -302,9 +353,7 @@ function CheckOut() {
                       )}
                     </div>
                     <div className={cx("product-price")}>
-                      <span>
-                        ${(Number(product?.newPrice) * countValue).toFixed(2)}
-                      </span>
+                      <span>{Number(product?.newPrice).toLocaleString()}₫</span>
                     </div>
                   </div>
                 )}
@@ -313,14 +362,14 @@ function CheckOut() {
                 <div className={cx("sub-total", "info-box")}>
                   <span>Subtotal * {countValue} items </span>
 
-                  <span>${subTotalPrice.toFixed(2)}</span>
+                  <span>{Number(subTotalPrice).toLocaleString()}₫</span>
                 </div>
                 <div className={cx("shipping", "info-box")}>
                   <span>Shipping</span>
                   {shippingFeeLoading ? (
                     <Skeleton width={80} height={16} />
                   ) : shippingFee && !shippingFeeLoading ? (
-                    <span>${shippingFee.toFixed(2)}</span>
+                    <span>{Number(shippingFee).toLocaleString()}₫</span>
                   ) : (
                     <span className={cx("special")}>
                       Enter shipping address
@@ -330,9 +379,12 @@ function CheckOut() {
                 <div className={cx("total-box")}>
                   <span>total</span>
                   <div className={cx("total-price")}>
-                    <p className={cx("currency")}>USD</p>
+                    <p className={cx("currency")}>VNĐ</p>
                     <span>
-                      ${Number(subTotalPrice + shippingFee).toFixed(2)}
+                      {(
+                        Number(subTotalPrice) + Number(shippingFee)
+                      ).toLocaleString()}
+                      ₫
                     </span>
                   </div>
                 </div>

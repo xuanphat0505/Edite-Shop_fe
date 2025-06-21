@@ -51,7 +51,7 @@ function Design2({ products, animate }) {
               </div>
               <div className={cx("product-price")}>
                 <Link to={`/product/${product._id}`}>{product.name}</Link>
-                <p>${Number(product.newPrice).toFixed(2)}</p>
+                <p>{Number(product.newPrice).toLocaleString()}₫</p>
               </div>
             </div>
           </div>

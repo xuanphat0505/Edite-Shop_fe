@@ -95,12 +95,12 @@ function QuestionForm() {
                 {findProductDetail?.sale ? (
                   <>
                     <del style={{ textDecoration: "line-through" }}>
-                      ${Number(findProductDetail?.price).toFixed(2)}
+                      ${Number(findProductDetail?.price).toLocaleString()}
                     </del>
-                    <ins>${Number(findProductDetail?.newPrice).toFixed(2)}</ins>
+                    <ins>${Number(findProductDetail?.newPrice).toLocaleString()}</ins>
                   </>
                 ) : (
-                  <span>${Number(findProductDetail?.newPrice).toFixed(2)}</span>
+                  <span>${Number(findProductDetail?.newPrice).toLocaleString()}</span>
                 )}
               </div>
             </div>

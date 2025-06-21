@@ -35,12 +35,12 @@ function MiniAddProduct({
             {productDetail?.sale ? (
               <>
                 <del style={{ color: "#8686868" }}>
-                  ${Number(productDetail?.price).toFixed(2)}
+                  ${Number(productDetail?.price).toLocaleString()}
                 </del>
-                <ins>${Number(productDetail?.newPrice).toFixed(2)}</ins>
+                <ins>${Number(productDetail?.newPrice).toLocaleString()}</ins>
               </>
             ) : (
-              `$${Number(productDetail?.newPrice).toFixed(2)}`
+              `$${Number(productDetail?.newPrice).toLocaleString()}`
             )}
           </div>
         </div>

@@ -2,16 +2,20 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import classNames from "classnames/bind";
+import { useSelector } from "react-redux";
 
 import { menus } from "../../assets/data/Data";
 import { OpenContext } from "../../contexts/OpenContext/OpenContext";
 
 import styles from "./SideBar.module.scss";
+import { AxiosContext } from "../../contexts/AxiosContext/AxiosContext";
 const cx = classNames.bind(styles);
 function SideBar() {
   const [activeTab, setActiveTab] = useState(0);
+  const { handleLogout } = useContext(AxiosContext);
   const { openMenu, handleCloseMenu, handleOpenSearch, handleOpenForm } =
     useContext(OpenContext);
+  const user = useSelector((state) => state.auth.user);
   return (
     <>
       <div
@@ -112,13 +116,40 @@ function SideBar() {
                   </span>
                 </Link>
               </li>
+              {user && (
+                <>
+                  <li onClick={handleCloseMenu}>
+                    <Link to="/orders">
+                      <span>
+                        <svg width="22px" height="22px" viewBox="0 0 22 22">
+                          <path d="M19,3H14.82C14.4,1.84,13.3,1,12,1S9.6,1.84,9.18,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5 C21,3.9,20.1,3,19,3z M12,3c0.55,0,1,0.45,1,1s-0.45,1-1,1s-1-0.45-1-1S11.45,3,12,3z M19,19H5V5h2v3h10V5h2V19z"></path>
+                          <path d="M7,12h8v2H7V12z"></path>
+                          <path d="M7,8h8v2H7V8z"></path>
+                          <path d="M7,16h8v2H7V16z"></path>
+                        </svg>
+                        orders
+                      </span>
+                    </Link>
+                  </li>
+                  <li onClick={handleCloseMenu}>
+                    <Link onClick={handleLogout}>
+                      <span>
+                        <svg width="22px" height="22px" viewBox="0 0 22 22">
+                          <path d="M17,7l-1.41,1.41L18.17,11H8v2h10.17l-2.58,2.58L17,17l5-5L17,7z M4,5h8V3H4c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h8v-2H4V5z" />
+                        </svg>
+                        logout
+                      </span>
+                    </Link>
+                  </li>
+                </>
+              )}
               <li className={cx("menu-help")}>
                 <p>Need help?</p>
                 <div className={cx("menu-infos")}>
                   <svg viewBox="0 0 22 22" style={{ top: "4px" }}>
                     <path d="M22,6.02V4c0-0.55-0.45-1-1-1H1C0.45,3,0,3.45,0,4v2.02c0,0,0,0,0,0V18c0,0.55,0.45,1,1,1h20c0.55,0,1-0.45,1-1V6.02				C22,6.02,22,6.02,22,6.02z M20,5v0.32l-9,3.6l-9-3.6V5H20z M2,17V7.48l9,3.6l9-3.6V17H2z"></path>{" "}
                   </svg>
-                  edite@domain.com
+                  phattran052004@gmail.com
                   <br />
                   <svg viewBox="0 0 22 22" style={{ top: "3px" }}>
                     <path
@@ -135,7 +166,7 @@ function SideBar() {
 				l2.43,2.43L16.05,19.92z"
                     ></path>
                   </svg>
-                  + 123.4567.889
+                  + 0397.192.664
                 </div>
               </li>
             </ul>

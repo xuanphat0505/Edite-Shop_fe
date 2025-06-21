@@ -1,11 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
 import axios from "axios";
 
 import useAxiosJWT from "../../config/axiosConfig";
 import { BASE_URL } from "../../config/utils";
 import { OpenContext } from "../OpenContext/OpenContext";
 import { toastSuccess, toastError } from "../../shared/Toastify/Toastify";
+import { logoutStart, logoutSuccess, logoutFailed } from "../../redux/authSlice";
 import useAxios from "../../hooks/useAxios";
 
 export const AxiosContext = createContext();
@@ -13,9 +14,11 @@ export const AxiosContext = createContext();
 function AxiosProvider({ children }) {
   const getAxiosJWT = useAxiosJWT();
   const axiosJWT = getAxiosJWT();
+  const dispatch = useDispatch();
   const accessToken = useSelector((state) => state?.auth?.user?.accessToken);
+  const user = useSelector((state) => state?.auth?.user);
 
-  const { handleOpenCart, handleCloseShop, handleOpenShop, handleOpenCompare } =
+  const { handleCloseShop, handleOpenShop, handleOpenCompare } =
     useContext(OpenContext);
 
   const [findProductDetail, setFindProductDetail] = useState({});
@@ -27,6 +30,7 @@ function AxiosProvider({ children }) {
   const [compareLoading, setCompareLoading] = useState(null);
   const [wishListLoading, setWishListLoading] = useState(null);
   const [updateCartLoading, setUpdateCartLoading] = useState(null);
+  const [logoutLoading, setLogoutLoading] = useState(false);
   const [clicked, setClicked] = useState(null);
   //
   const [wishList, setWishList] = useState([]);
@@ -41,7 +45,39 @@ function AxiosProvider({ children }) {
     const productDetail = allProducts.find((product) => product._id === id);
     setFindProductDetail(productDetail);
   };
-
+  const handleLogout = async () => {
+    if (!user?.accessToken) {
+      return toastError("You are not logged in yet");
+    }
+    setLogoutLoading(true);
+    dispatch(logoutStart());  
+    try {
+      const res = await axiosJWT.post(
+        `${BASE_URL}/auth/logout`,
+        {},
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user?.accessToken}`,
+          },
+          withCredentials: true,
+        }
+      );
+      const result = res.data;
+      if (result.success) {
+        dispatch(logoutSuccess());
+        setLogoutLoading(false);
+        toastSuccess(result.message, 1000);
+        setTimeout(() => {
+          window.location.reload(); // Reload to reflect the logged-out state
+        }, 1500);
+      }
+    } catch (error) {
+      dispatch(logoutFailed());
+      setLogoutLoading(false);
+      return toastError(error?.response?.data.message);
+    }
+  };
   // wishlist
   const addToWishList = async (productId) => {
     if (!accessToken) {
@@ -311,9 +347,7 @@ function AxiosProvider({ children }) {
         setClicked(null);
         getProductsInCart();
         handleCloseShop();
-        if (shouldOpen) {
-          handleOpenCart();
-        }
+        toastSuccess(result.message);
       }
     } catch (error) {
       setAddToCartLoading(null);
@@ -443,6 +477,7 @@ function AxiosProvider({ children }) {
         noteInCart,
         subTotalPrice,
         findProductDetail,
+        logoutLoading,
 
         isInWishList,
         handleRemoveFavoriteProduct,
@@ -458,6 +493,7 @@ function AxiosProvider({ children }) {
         handleDecreaseProductInCart,
         getProductsInCart,
         handleFindProductDetail,
+        handleLogout,
       }}
     >
       {children}

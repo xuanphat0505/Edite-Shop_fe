@@ -34,7 +34,7 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
   const [isHover, setIsHover] = useState(false);
   const subImageHover = product?.subImage[1];
   const mainImage = product?.image;
-  
+
   const getSubImageByOptionId = (optionImageId) => {
     const subImage = product?.subImage.find(
       (image) => image.id === optionImageId
@@ -199,11 +199,11 @@ function ProductBox1({ product, index, isFavorite, inCompareList }) {
         <div className={cx("product-price")}>
           {product?.sale ? (
             <>
-              <del>${Number(product?.price).toFixed(2)}</del>
-              <ins>${Number(product?.newPrice).toFixed(2)}</ins>
+              <del>{Number(product?.price).toLocaleString()}₫</del>
+              <ins>{Number(product?.newPrice).toLocaleString()}₫</ins>
             </>
           ) : (
-            `$${Number(product?.newPrice).toFixed(2)}`
+            `${Number(product?.newPrice).toLocaleString()}₫`
           )}
         </div>
         <div className={cx("option-colors")}>

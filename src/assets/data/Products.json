@@ -547,5 +547,235 @@
     ],
     "category": [{ "categoryType": "Sofa" }],
     "date": "3/30/2024"
+  },
+  {
+    "name": "bond 4 cross armchair",
+    "newPrice": "129000",
+    "sale": false,
+    "type": "best seller",
+    "optionColor": [
+      { "code": "#0000ff", "colorName": "Blue", "optionImageId": 1 },
+      { "code": "#47a5cf", "colorName": "Light Denim", "optionImageId": 2 },
+      { "code": "#008000", "colorName": "Green", "optionImageId": 3 }
+    ],
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750305946/product_ei1eib.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750305943/sub-product-1_cbqytk.webp",
+        "colorImage": "Blue"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750305943/sub-product-2_tv4swy.webp",
+        "colorImage": "Light Denim"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750305944/sub-product-3_lphjhy.webp",
+        "colorImage": "Green"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750307147/sub-product-4_x4qbtb.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750307147/sub-product-5_yjzmff.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750307147/sub-product-6_qaakum.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750307148/sub-product-7_siyhcx.webp"
+      }
+    ],
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci.",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "Sofa" }, { "categoryType": "Bedroom" }],
+    "date": "6/19/2024"
+  },
+  {
+    "name": "aplomb pendant light",
+    "newPrice": "230000",
+    "sale": false,
+    "type": "top rate",
+    "optionColor": [
+      { "code": "#ffff00", "colorName": "Yellow", "optionImageId": 1 },
+      { "code": "#008000", "colorName": "Green", "optionImageId": 2 },
+      { "code": "#876610", "colorName": "Dark Brown", "optionImageId": 3 },
+      { "code": "#a9a9a9", "colorName": "Dark gray", "optionImageId": 4 },
+      { "code": "#d3d3d3", "colorName": "Light gray", "optionImageId": 5 },
+      { "code": "#b1660f", "colorName": "Light brown", "optionImageId": 6 }
+    ],
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309050/image_aa7oxh.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309050/image_aa7oxh.webp",
+        "colorImage": "Yellow"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309050/sub-image-2_fefdye.webp",
+        "colorImage": "Green"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309050/sub-image-3_n57ypu.webp",
+        "colorImage": "Dark Brown"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309050/sub-image-4_fdrnkh.webp",
+        "colorImage": "Dark gray"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-5_r6majt.webp",
+        "colorImage": "Light gray"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-6_hdqwti.webp",
+        "colorImage": "Light brown"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-7_hr9swe.webp"
+      },
+      {
+        "id": 8,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-8_dcmqz8.webp"
+      },
+      {
+        "id": 9,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-9_wjihkz.webp"
+      },
+      {
+        "id": 10,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309051/sub-image-10_uw5yum.webp"
+      },
+      {
+        "id": 11,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309052/sub-image-11_ggoe6s.webp"
+      }
+    ],
+    "shortDescription": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "description": "Blandit parturient adipiscing faucibus fringilla vestibulum ultrices integer dolor parturient parturient at porta platea inceptos. Habitant dui ut fringilla eleifend tincidunt scelerisque porta a tortor adipiscing ullamcorper etiam imperdiet pulvinar vel facilisis potenti facilisis mi parturient sed per egestas vivamus a auctor eu curae. Id dui bibendum non enim accumsan leo habitant diam eu.",
+    "category": [{ "categoryType": "Decor" }, { "categoryType": "Bedroom" }],
+    "date": "6/19/2024"
+  },
+  {
+    "name": "braydon planter",
+    "newPrice": "100000",
+    "sale": false,
+    "type": "featured",
+    "optionColor": [
+      { "code": "#000000", "colorName": "Black", "optionImageId": 1 },
+      { "code": "#fff", "colorName": "White", "optionImageId": 3 }
+    ],
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309423/product_l66hnl.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309423/product_l66hnl.webp",
+        "colorImage": "Black"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309424/sub-product-2_rlxijx.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309424/sub-product-3_v1ncqi.webp",
+        "colorImage": "White"
+      }
+    ],
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci.",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "Sofa" }, { "categoryType": "Bedroom" }],
+    "date": "6/19/2024"
+  },
+  {
+    "name": "planter box",
+    "price": "159000",
+    "newPrice": "116000",
+    "sale": -27,
+    "type": "sale",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309731/product_btriql.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309731/product_btriql.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309731/sub-product-2_nhvjsu.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309732/sub-product-3_ys4lou.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309731/sub-product-4_iomrr5.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309732/sub-product-5_texhbm.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309733/sub-product-6_kv1nb7.webp"
+      }
+    ],
+    "shortDescription": "FIGHTING FIT Go sporty this summer with this vintage navy and white striped v-neck t-shirt from the Abercrombie & Fitch. Perfect for pairing with denim and white kicks for a...",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "Decor" }, { "categoryType": "Kitchen" }],
+    "date": "6/19/2024"
+  },
+  {
+    "name": "jovita shelf unit",
+    "newPrice": "200000",
+    "sale": false,
+    "type": "top rate",
+    "image": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/product_qrpzxg.webp",
+    "subImage": [
+      {
+        "id": 1,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/product_qrpzxg.webp"
+      },
+      {
+        "id": 2,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/sub-product-2_xghiqy.webp"
+      },
+      {
+        "id": 3,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/sub-product-3_msw0qs.webp"
+      },
+      {
+        "id": 4,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/sub-product-4_q8mpvs.webp"
+      },
+      {
+        "id": 5,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309892/sub-product-5_mn8pq7.webp"
+      },
+      {
+        "id": 6,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309893/sub-product-6_a4zybn.webp"
+      },
+      {
+        "id": 7,
+        "src": "https://res.cloudinary.com/djmeybzjk/image/upload/v1750309893/sub-product-7_xeguq6.webp"
+      }
+    ],
+    "shortDescription": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci.",
+    "description": "A discerning wardrobe consists of timeless basics. Our henley is unmistakably refined, subtle, and features an attractive neckline with a deep five-button placket.",
+    "category": [{ "categoryType": "Kitchen" }, { "categoryType": "Decor" }],
+    "date": "6/19/2024"
   }
 ]

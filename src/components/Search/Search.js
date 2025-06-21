@@ -137,11 +137,11 @@ function Search() {
                     </Link>
                     {result.sale ? (
                       <span>
-                        <del>${Number(result.price).toFixed(2)}</del>
-                        <ins>${Number(result.newPrice).toFixed(2)}</ins>
+                        <del>{Number(result.price).toLocaleString()}₫</del>
+                        <ins>{Number(result.newPrice).toLocaleString()}₫</ins>
                       </span>
                     ) : (
-                      <span>$ {Number(result.newPrice).toFixed(2)}</span>
+                      <span>{Number(result.newPrice).toLocaleString()}₫</span>
                     )}
                   </div>
                 </div>

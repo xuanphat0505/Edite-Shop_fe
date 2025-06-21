@@ -13,9 +13,6 @@ import { BASE_URL } from "../../config/utils";
 import { OpenContext } from "../../contexts/OpenContext/OpenContext";
 import { AxiosContext } from "../../contexts/AxiosContext/AxiosContext";
 import useAxiosJWT from "../../config/axiosConfig";
-import productDetaiImage1 from "../../assets/images/produc-detail-1.webp";
-import productDetaiImage2 from "../../assets/images/produc-detail-2.webp";
-import productDetaiImage3 from "../../assets/images/produc-detail-3.webp";
 import Design1 from "../../shared/Design/Design1";
 import useAxios from "../../hooks/useAxios";
 import MiniAddProduct from "../../components/MiniAddProduct/MiniAddProduct";
@@ -397,11 +394,13 @@ function ProductDetail() {
             <div className={cx("product-detail_price", "product-price")}>
               {productDetail[0]?.sale ? (
                 <>
-                  <del>${Number(productDetail[0]?.price).toFixed(2)}</del>
-                  <ins>${Number(productDetail[0]?.newPrice).toFixed(2)}</ins>
+                  <del>{Number(productDetail[0]?.price).toLocaleString()}đ</del>
+                  <ins>
+                    {Number(productDetail[0]?.newPrice).toLocaleString()}đ
+                  </ins>
                 </>
               ) : (
-                `$${Number(productDetail[0]?.newPrice).toFixed(2)}`
+                `${Number(productDetail[0]?.newPrice).toLocaleString()}đ`
               )}
             </div>
             <div className={cx("tax")}>Tax included.</div>
@@ -430,7 +429,9 @@ function ProductDetail() {
                         onClick={() =>
                           handleImageClick(
                             option.optionImageId,
-                            option.optionImageId,
+                            productDetail[0]?.subImage.findIndex(
+                              (img) => img.id === option.optionImageId
+                            ),
                             option.colorName
                           )
                         }
@@ -638,13 +639,28 @@ function ProductDetail() {
               </div>
               <div className={cx("tab-box_images")}>
                 <div className={cx("col-image")}>
-                  <img src={productDetaiImage1} alt=""></img>
+                  <img
+                    src={
+                      "https://res.cloudinary.com/djmeybzjk/image/upload/v1750425941/produc-detail-1_fczbvf.webp"
+                    }
+                    alt=""
+                  ></img>
                 </div>
                 <div className={cx("col-image")}>
-                  <img src={productDetaiImage2} alt=""></img>
+                  <img
+                    src={
+                      "https://res.cloudinary.com/djmeybzjk/image/upload/v1750425940/produc-detail-2_cltxbu.webp"
+                    }
+                    alt=""
+                  ></img>
                 </div>
                 <div className={cx("col-image")}>
-                  <img src={productDetaiImage3} alt=""></img>
+                  <img
+                    src={
+                      "https://res.cloudinary.com/djmeybzjk/image/upload/v1750425941/produc-detail-3_xpdh4f.webp"
+                    }
+                    alt=""
+                  ></img>
                 </div>
               </div>
             </div>

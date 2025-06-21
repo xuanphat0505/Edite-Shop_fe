@@ -31,11 +31,11 @@ header {
     }
     &.mode1::before {
       background-position: center;
-      background-image: url("../../assets/images/bg-1.webp");
+      background-image: url("https://res.cloudinary.com/djmeybzjk/image/upload/v1750425908/bg-1_na98uz.webp");
     }
     &.mode2::before {
       background-position: left;
-      background-image: url("../../assets/images/bg-2.webp");
+      background-image: url("https://res.cloudinary.com/djmeybzjk/image/upload/v1750425908/bg-2_w4pep3.webp");
     }
     &.mode2 {
       .slide-content {

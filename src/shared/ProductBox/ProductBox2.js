@@ -170,11 +170,11 @@ function ProductBox2({
           <div className={cx("product-price", "product2-price")}>
             {product?.sale ? (
               <>
-                <del>${Number(product?.price).toFixed(2)}</del>
-                <ins>${Number(product?.newPrice).toFixed(2)}</ins>
+                <del>{Number(product?.price).toLocaleString()}₫</del>
+                <ins>{Number(product?.newPrice).toLocaleString()}₫</ins>
               </>
             ) : (
-              `$${Number(product.newPrice).toFixed(2)}`
+              `${Number(product.newPrice).toLocaleString()}₫`
             )}
           </div>
           <Tippy

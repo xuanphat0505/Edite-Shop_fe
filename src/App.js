@@ -27,7 +27,9 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import QuestionForm from "./components/QuestionForm/QuestionForm";
 import ViewCart from "./pages/ViewCart/ViewCart";
 import CheckOut from "./pages/CheckOut/CheckOut";
-
+import PaymentStatus from "./pages/PaymentStatus/PaymentStatus";
+import PaymentMethod from "./pages/PaymentMethod/PaymentMethod";
+import ListOrders from "./pages/ListOrders/ListOrders";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
@@ -49,6 +51,12 @@ function App() {
         <Route path="/product/result" element={<SearchProductResult />}></Route>
         <Route path="/view-cart" element={<ViewCart />}></Route>
         <Route path="/checkout" element={<CheckOut />}></Route>
+        <Route
+          path="/payment-status/result"
+          element={<PaymentStatus />}
+        ></Route>
+        <Route path="/payment-method" element={<PaymentMethod />}></Route>
+        <Route path="/orders" element={<ListOrders />}></Route>
       </Routes>
       <ToastContainer />
       <Footer />
@@ -61,12 +69,6 @@ function App() {
       <QuickShop />
       <CompareBox />
       <QuestionForm />
-      {/* <iframe
-        src="https://bot.orimon.ai/?tenantId=057c0827-182e-4cea-8a86-0b80f1f30189&fullScreenBot=true"
-        height="100%"
-        width="100%"
-        border="none"
-      ></iframe> */}
     </div>
   );
 }

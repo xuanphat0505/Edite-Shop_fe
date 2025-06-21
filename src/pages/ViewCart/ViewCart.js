@@ -151,14 +151,14 @@ function ViewCart() {
                   <div className={cx("cart-price_container", "product-price ")}>
                     {product.productId.sale ? (
                       <>
-                        <del>${Number(product.productId.price).toFixed(2)}</del>
+                        <del>${Number(product.productId.price).toLocaleString()}</del>
                         <ins>
-                          ${Number(product.productId.newPrice).toFixed(2)}
+                          ${Number(product.productId.newPrice).toLocaleString()}
                         </ins>
                       </>
                     ) : (
                       <span>
-                        ${Number(product.productId.newPrice).toFixed(2)}
+                        ${Number(product.productId.newPrice).toLocaleString()}
                       </span>
                     )}
                   </div>
@@ -193,7 +193,7 @@ function ViewCart() {
                       $
                       {Number(
                         product.count * product.productId.newPrice
-                      ).toFixed(2)}
+                      ).toLocaleString()}
                     </span>
                   </div>
                   <div className={cx("remove-item_container")}>
@@ -237,7 +237,7 @@ function ViewCart() {
               <div className={cx("subtotal-container")}>
                 <div className={cx("subtotal-box")}>
                   <strong>subtotal:</strong>
-                  <span>${Number(subTotalPrice)?.toFixed(2)} USD</span>
+                  <span>${Number(subTotalPrice)?.toLocaleString()} USD</span>
                 </div>
                 <p style={{ marginBottom: "10px" }}>
                   Tax included and shipping calculated at checkout

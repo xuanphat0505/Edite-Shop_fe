@@ -80,14 +80,14 @@ function QuickShop() {
                 <div className={cx("price", "product-price")}>
                   {findProductDetail?.sale ? (
                     <>
-                      <del>${Number(findProductDetail?.price).toFixed(2)}</del>
+                      <del>${Number(findProductDetail?.price).toLocaleString()}</del>
                       <ins>
-                        ${Number(findProductDetail?.newPrice).toFixed(2)}
+                        ${Number(findProductDetail?.newPrice).toLocaleString()}
                       </ins>
                     </>
                   ) : (
                     <span>
-                      ${Number(findProductDetail?.newPrice).toFixed(2)}
+                      ${Number(findProductDetail?.newPrice).toLocaleString()}
                     </span>
                   )}
                 </div>

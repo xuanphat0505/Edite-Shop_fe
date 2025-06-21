@@ -110,9 +110,9 @@ function Compare() {
                     <div className={cx("table-col", "value")} key={product._id}>
                       <div className={cx("table-content", "product-price")}>
                         <del style={{ textDecoration: "line-through" }}>
-                          ${Number(product.price).toFixed(2)}
+                          ${Number(product.price).toLocaleString()}
                         </del>
-                        <ins>${Number(product.newPrice).toFixed(2)}</ins>
+                        <ins>${Number(product.newPrice).toLocaleString()}</ins>
                       </div>
                     </div>
                   ) : (
@@ -121,7 +121,7 @@ function Compare() {
                         className={cx("table-content")}
                         style={{ fontSize: "15px" }}
                       >
-                        ${Number(product.newPrice).toFixed(2)}
+                        ${Number(product.newPrice).toLocaleString()}
                       </div>
                     </div>
                   )

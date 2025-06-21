@@ -8,7 +8,6 @@ import axios from "axios";
 import { BASE_URL } from "../../config/utils";
 import { loginStart, loginSuccess, loginFailed } from "../../redux/authSlice";
 import { toastError, toastSuccess } from "../../shared/Toastify/Toastify";
-import GoogleIcon from "../../assets/images/google-icon.png";
 import Loader from "../../shared/Loader/Loader";
 
 import styles from "./Login.module.scss";
@@ -146,7 +145,7 @@ function Login({ setForm = {}, handleCloseForm }) {
             ) : (
               <>
                 <span>sign in with google</span>
-                <img src={GoogleIcon} alt="google-icon" />
+                <img src={"https://res.cloudinary.com/djmeybzjk/image/upload/v1750425917/google-icon_lywjbm.png"} alt="google-icon" />
               </>
             )}
           </button>
