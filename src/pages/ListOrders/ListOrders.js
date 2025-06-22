@@ -15,90 +15,6 @@ import { BASE_URL } from "../../config/utils";
 
 import styles from "./ListOrders.module.scss";
 const cx = classNames.bind(styles);
-// Mock data
-const mockOrders = [
-  {
-    id: "1",
-    date: "2024-03-20",
-    status: "completed",
-    paymentMethod: "VNPay",
-    products: [
-      {
-        id: "1",
-        name: "Nike Air Max 2024",
-        image:
-          "https://static.nike.com/a/images/t_default/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-high-by-you-shoes.png",
-        price: 2990000,
-        quantity: 2,
-        color: "Black/White",
-      },
-      {
-        id: "2",
-        name: "Nike Dri-FIT T-Shirt",
-        image:
-          "https://static.nike.com/a/images/t_default/7c472175-e47a-4078-8a69-d6cffaf6f726/sportswear-t-shirt-zmMkxS.png",
-        price: 590000,
-        quantity: 1,
-        color: "Blue",
-      },
-    ],
-    totalAmount: 6570000,
-  },
-  {
-    id: "2",
-    date: "2024-03-19",
-    status: "processing",
-    paymentMethod: "MoMo",
-    products: [
-      {
-        id: "3",
-        name: "Adidas Ultraboost",
-        image:
-          "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg",
-        price: 4200000,
-        quantity: 1,
-        color: "Core Black",
-      },
-    ],
-    totalAmount: 4200000,
-  },
-  {
-    id: "3",
-    date: "2024-03-18",
-    status: "shipping",
-    paymentMethod: "COD",
-    products: [
-      {
-        id: "4",
-        name: "Puma RS-X",
-        image:
-          "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_1350,h_1350/global/368845/02/sv01/fnd/IND/fmt/png/RS-X-Efekt-Unisex-Sneakers",
-        price: 2800000,
-        quantity: 1,
-        color: "White/Red",
-      },
-    ],
-    totalAmount: 2800000,
-  },
-  {
-    id: "4",
-    date: "2024-03-17",
-    status: "cancelled",
-    paymentMethod: "VNPay",
-    products: [
-      {
-        id: "5",
-        name: "Adidas Stan Smith",
-        image:
-          "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/68ae7ea7849b43eca70aac1e00f5146d_9366/Stan_Smith_Shoes_White_FX5502_01_standard.jpg",
-        price: 2500000,
-        quantity: 1,
-        color: "White/Green",
-      },
-    ],
-    totalAmount: 2500000,
-  },
-];
 
 const getStatusIcon = (status) => {
   switch (status.toLowerCase()) {
@@ -220,7 +136,7 @@ function ListOrders() {
               <div className={cx("order-footer")}>
                 <div className={cx("payment-method")}>
                   Phương thức thanh toán:
-                  <span>{order.paymentInfo.paymentMethod.toUpperCase()}</span>
+                  <span>{order.paymentInfo?.paymentMethod?.toUpperCase()}</span>
                 </div>
                 <div className={cx("order-total")}>
                   <span>Tổng tiền:</span>

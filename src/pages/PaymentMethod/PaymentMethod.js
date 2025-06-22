@@ -79,7 +79,7 @@ function PaymentMethod() {
       if (result.success && selectedMethod !== "cod") {
         window.location.href = result.data;
       } else if (selectedMethod === "cod") {
-        window.location.href = `http://localhost:3000/payment-status/result?status=completed&orderId=${orderId}`;
+        window.location.href = `/payment-status/result?status=completed&orderId=${orderId}`;
       }
     } catch (error) {
       return toastError(error?.response.data.message);
